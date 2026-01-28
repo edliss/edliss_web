@@ -1,22 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Kurkum</title>
-    <meta name="description" content="Kurkum — Save, import, and cook recipes." />
+  <title>Kurkum — Recipe Keeper</title>
+  <meta
+    name="description"
+    content="Kurkum is a recipe manager for saving, importing, and cooking recipes. Works offline. No account required."
+  />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    
-    <link rel="icon" href="/assets/kurkum/favicon.ico" />
-    <link rel="stylesheet" href="/assets/kurkum.css" />
-  </head>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://edliss.com/kurkum/" />
+
+  <!-- App Store / iOS -->
+  <meta name="apple-itunes-app" content="app-id=1575901044" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/kurkum/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/kurkum/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/kurkum/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/kurkum/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kurkum" />
+  <meta property="og:title" content="Kurkum — Recipe Keeper" />
+  <meta
+    property="og:description"
+    content="Save, import, and cook recipes. Works offline. No account required."
+  />
+  <meta property="og:url" content="https://edliss.com/kurkum/" />
+  <meta property="og:image" content="https://edliss.com/assets/kurkum/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kurkum — Recipe Keeper" />
+  <meta
+    name="twitter:description"
+    content="Save, import, and cook recipes. Works offline. No account required."
+  />
+  <meta name="twitter:image" content="https://edliss.com/assets/kurkum/og.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/assets/kurkum.css" />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Kurkum",
+    "operatingSystem": "iOS",
+    "applicationCategory": "FoodApplication",
+    "description": "Recipe manager for saving, importing, and cooking recipes. Works offline. No account required.",
+    "url": "https://edliss.com/kurkum/",
+    "downloadUrl": "https://apps.apple.com/us/app/kurkum-recipe-manager/id1575901044",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Edliss"
+    }
+  }
+  </script>
+</head>
 
   <body>
     <main class="page">
@@ -24,15 +83,11 @@
         <a class="brand-link" href="https://apps.apple.com/app/1575901044">
           <div class="brand">
             <img class="logo" src="/assets/kurkum/logo-icon.png" alt="Kurkum logo" width="44" height="44" />
-            <h1 class="app-name">Kurkum</h1>
+            <span class="app-name">Kurkum</span>
           </div>
         </a>
 
-        <p class="headline">
-          Save, import,<br />
-          cook recipes.
-        </p>
-
+        <h1 class="headline">Save, import,<br />cook recipes.</h1>
         <p class="subhead">Save your own recipes, import from the web, and cook step-by-step.<br />Works offline. No account.</p>
 
          <div class="cta">
@@ -94,6 +149,14 @@
             </div>
           </figure>
         </div>
+      </section>
+      
+      <section class="about" aria-label="About Kurkum">
+        <h2>Recipe manager built for everyday cooking</h2>
+        <p>
+          Kurkum helps you save your personal recipes, import recipes from the web, and follow steps while you cook.
+          Everything works offline, and you don’t need an account.
+        </p>
       </section>
 
       <section class="final-cta" aria-label="Download">
