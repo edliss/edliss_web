@@ -3,12 +3,11 @@
   --fg: #1d1d1f;
   --muted: #6e6e73;
   --line: #d2d2d7;
-  --tint: #f5f5f7;
   --surface: #ffffff;
   --surface-hover: #f7f8fa;
-  --nav-bg: rgba(255, 255, 255, 0.88);
-  --nav-border: #ececef;
   --max: 1120px;
+  --gutter: 24px;
+  --gutter-mobile: 20px;
 }
 
 * {
@@ -34,31 +33,21 @@ a:hover {
   text-decoration: underline;
 }
 
+main {
+  padding: 15px;
+}
+
+section {
+  margin: 1rem auto;
+}
+
 .wrap {
   max-width: var(--max);
   margin: 0 auto;
 }
 
-.local-nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: var(--nav-bg);
-  backdrop-filter: saturate(180%) blur(18px);
-  border-bottom: 1px solid var(--nav-border);
-}
-
-.nav-inner {
-  height: 52px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 14px;
-  color: var(--fg);
-}
-
 .hero {
-  padding: clamp(72px, 10vw, 120px) 0 clamp(68px, 9vw, 106px);
+  padding: clamp(72px, 10vw, 1rem) 0 clamp(68px, 9vw, 1rem);
   text-align: center;
   background: var(--bg);
 }
@@ -75,7 +64,10 @@ a:hover {
   height: 96px;
   border-radius: 24px;
   background-color: transparent;
-  background-image: url("/assets/french-numbers/app-icon.png");
+  background-image: image-set(
+    url("/assets/french-numbers/app-icon.webp") type("image/webp"),
+    url("/assets/french-numbers/app-icon.png") type("image/png")
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,9 +116,9 @@ a:hover {
   filter: brightness(0.95);
 }
 
-.feature {
-  padding: 10px 0;
-}
+/* .feature {
+  padding: 10px;
+} */
 
 .feature-pair {
   padding: 10px 0;
@@ -366,17 +358,18 @@ a:hover {
   padding: 0 8px;
 }
 
+.progress-mobile {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #111113;
     --fg: #f5f5f7;
     --muted: #a1a1a6;
     --line: #3a3a3c;
-    --tint: #111113;
     --surface: #1c1c1e;
     --surface-hover: #2a2a2d;
-    --nav-bg: rgba(17, 17, 19, 0.88);
-    --nav-border: #2a2a2d;
   }
 
   .hero-cta {
@@ -395,6 +388,40 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+
+  .feature,
+  .feature-pair {
+    padding: 14px;
+  }
+
+  .progress-desktop {
+    display: none;
+  }
+
+  .progress-mobile {
+    display: block;
+  }
+
+  .hero {
+    padding: 52px 0 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10.5vw, 54px);
+    max-width: 12ch;
+    margin: 14px auto 10px;
+  }
+
+  .lead {
+    font-size: clamp(17px, 4.4vw, 21px);
+    margin-bottom: 18px;
+  }
+
+  .hero-cta {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
   .feature-pair-grid {
     grid-template-columns: 1fr;
   }
@@ -414,8 +441,9 @@ a:hover {
   }
 
   .feature-grid {
-    border-radius: 28px;
-    padding: 24px;
+    border-radius: 26px;
+    padding: 22px;
+    gap: 16px;
   }
 
   .feature-grid-stack {
@@ -424,12 +452,12 @@ a:hover {
   }
 
   .feature-grid-stack .shot {
-    height: clamp(300px, 62vw, 420px);
+    height: clamp(260px, 66vw, 380px);
   }
 
   .feature-grid-stack .shot-image {
-    width: min(340px, 88%);
-    transform: translateY(30%);
+    width: min(300px, 86%);
+    transform: translateY(22%);
   }
 
   .eyebrow {
