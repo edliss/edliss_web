@@ -34,7 +34,7 @@ a:hover {
 }
 
 main {
-  padding: 15px;
+  padding: 1rem;
 }
 
 section {
@@ -417,11 +417,6 @@ section {
   .lang-switch {
     margin-top: 0;
     font-size: 13px;
-  }
-
-  .feature,
-  .feature-pair {
-    padding: 14px;
   }
 
   .progress-desktop {
