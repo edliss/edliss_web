@@ -452,12 +452,11 @@ section {
   }
 
   .feature-grid-stack .shot {
-    height: clamp(260px, 66vw, 380px);
+    height: clamp(405px, 30vw, 520px);
   }
 
   .feature-grid-stack .shot-image {
-    width: min(300px, 86%);
-    transform: translateY(22%);
+    width: min(320px, 100%);
   }
 
   .eyebrow {
