@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edliss Notes</title>
+    <link>https://edliss.com/notes/</link>
+    <atom:link href="https://edliss.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Short notes about building simple, useful software and the ideas behind the apps Edliss makes.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Simple Is Hard</title>
+      <link>https://edliss.com/notes/simple-is-hard/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/simple-is-hard/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Simple software is not small by default. It is software shaped by decisions.</description>
+    </item>
+    <item>
+      <title>Not Every App Needs an Account</title>
+      <link>https://edliss.com/notes/not-every-app-needs-an-account/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/not-every-app-needs-an-account/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Many useful apps work better when they ask less from the user.</description>
+    </item>
+    <item>
+      <title>Software Should Not Feel Like Administration</title>
+      <link>https://edliss.com/notes/software-should-not-feel-like-administration/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/software-should-not-feel-like-administration/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Good software should make the next useful action feel obvious.</description>
+    </item>
+  </channel>
+</rss>
