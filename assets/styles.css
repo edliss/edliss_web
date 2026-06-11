@@ -208,6 +208,78 @@ p a {
     max-width: 680px
 }
 
+.apps-intro {
+    max-width: 680px
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 760px
+}
+
+.app-card {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: center;
+    gap: 28px;
+    min-height: 160px;
+    padding: 24px 0;
+    border-top: 1px solid #ececf0;
+    color: inherit;
+    text-decoration: none
+}
+
+.app-card:last-child {
+    border-bottom: 1px solid #ececf0
+}
+
+.app-card:hover .app-card-name {
+    text-decoration: underline
+}
+
+.app-card-icon {
+    display: block;
+    width: 112px;
+    height: 112px;
+    border-radius: 24px
+}
+
+.app-card-copy {
+    display: block
+}
+
+.app-card-name {
+    display: block;
+    color: #d2a668;
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 1.35em;
+    margin: 0 0 8px 0
+}
+
+.app-card-desc {
+    display: block;
+    color: #595f6e;
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.8em
+}
+
+.apps-store-section {
+    margin: 28px 0 0 0
+}
+
+.apps-store-link {
+    display: inline-block;
+    color: #595f6e;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.6em;
+    text-decoration: underline
+}
+
 .notes-list {
     max-width: 760px
 }
@@ -288,6 +360,35 @@ p a {
 @media (max-width: 1040px) {
     p {
         font-size: 0.7em
+    }
+
+    .apps-grid {
+        gap: 0
+    }
+
+    .app-card {
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 20px;
+        min-height: 132px;
+        padding: 22px 0
+    }
+
+    .app-card-icon {
+        width: 88px;
+        height: 88px;
+        border-radius: 20px
+    }
+
+    .app-card-name {
+        font-size: 1em
+    }
+
+    .app-card-desc {
+        font-size: 0.7em
+    }
+
+    .apps-store-link {
+        font-size: 0.85em
     }
 
     .note-body li {
