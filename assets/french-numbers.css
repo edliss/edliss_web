@@ -271,10 +271,10 @@ section {
 
 .intent-title {
   margin: 24px 0 14px;
-  max-width: 13ch;
-  font-size: 56px;
+  max-width: 760px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.04;
+  line-height: 1.08;
   letter-spacing: 0;
 }
 
@@ -282,7 +282,7 @@ section {
   margin: 0;
   max-width: 60ch;
   color: var(--muted);
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -295,7 +295,7 @@ section {
 .intent-article p,
 .intent-article li {
   color: var(--fg);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.75;
 }
 

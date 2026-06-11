@@ -67,6 +67,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://edliss.com/french-numbers/fr/french-numbers-listening-practice/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edliss.com/french-numbers/fr/practice-french-prices-in-euros/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edliss.com/french-numbers/fr/french-time-listening-practice/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://edliss.com/notes/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
