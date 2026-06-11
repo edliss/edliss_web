@@ -13,6 +13,9 @@
   --line: #d2d2d7;
   --surface: #ffffff;
   --surface-hover: #f7f8fa;
+  --intent-pill: #f6f8fb;
+  --intent-pill-border: #cfd5df;
+  --intent-brand: #1268d8;
   --max: 1120px;
   --gutter: 24px;
   --gutter-mobile: 20px;
@@ -30,6 +33,10 @@ body {
   color: var(--fg);
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+body.intent-body {
+  background: #ffffff;
 }
 
 a {
@@ -222,6 +229,139 @@ section {
   filter: brightness(0.95);
 }
 
+/* Intent pages */
+
+.intent-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intent-header {
+  padding: clamp(22px, 5vw, 54px) 0 clamp(20px, 5vw, 40px);
+}
+
+.intent-lockup {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 13px;
+  border: 1px solid var(--intent-pill-border);
+  border-radius: 999px;
+  background: var(--intent-pill);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 18px rgba(29, 29, 31, 0.06);
+}
+
+.intent-header .app-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 16px rgba(0, 122, 255, 0.16),
+    0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+.intent-header .eyebrow {
+  color: var(--intent-brand);
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.intent-title {
+  margin: 24px 0 14px;
+  max-width: 13ch;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.intent-summary {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.intent-article {
+  max-width: 680px;
+  padding: clamp(20px, 5vw, 48px) 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.intent-article p,
+.intent-article li {
+  color: var(--fg);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.intent-article p {
+  margin: 0 0 20px;
+}
+
+.intent-article ul {
+  margin: 0 0 22px 22px;
+  padding: 0;
+}
+
+.intent-article a,
+.intent-related a,
+.related-pages a {
+  color: #007aff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.intent-cta {
+  margin: 38px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.intent-cta p {
+  color: var(--muted);
+}
+
+.intent-related {
+  margin: 42px 0 72px;
+}
+
+.intent-related h2,
+.related-pages h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.intent-related ul,
+.related-pages ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intent-related li,
+.related-pages li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.intent-related li {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
 /* .feature {
   padding: 10px;
 } */
@@ -344,6 +484,16 @@ section {
 
 .other-apps {
   padding: 0 0 clamp(46px, 7vw, 72px);
+}
+
+.related-pages {
+  padding: 0 0 42px;
+}
+
+.related-pages .wrap {
+  max-width: 800px;
+  padding: clamp(18px, 5vw, 46px) 0;
+  border-top: 1px solid var(--line);
 }
 
 .other-apps h2 {
@@ -476,6 +626,13 @@ section {
     --line: #3a3a3c;
     --surface: #1c1c1e;
     --surface-hover: #2a2a2d;
+    --intent-pill: #191f28;
+    --intent-pill-border: #2f3a48;
+    --intent-brand: #62a6ff;
+  }
+
+  body.intent-body {
+    background: var(--bg);
   }
 
   .hero-cta {
@@ -579,5 +736,19 @@ section {
 
   .other-app-store {
     padding: 0 10px 10px;
+  }
+
+  .intent-header {
+    padding: 38px 0 32px;
+  }
+
+  .intent-title {
+    font-size: 40px;
+  }
+
+  .intent-summary,
+  .intent-article p,
+  .intent-article li {
+    font-size: 16px;
   }
 }
