@@ -190,9 +190,113 @@ p a {
     text-decoration: underline
 }
 
+.site-nav {
+    margin: 0 0 32px 0
+}
+
+.site-nav p {
+    color: #bcbdc2
+}
+
+.site-nav a {
+    color: #595f6e;
+    font-weight: 700;
+    text-decoration: underline
+}
+
+.notes-intro {
+    max-width: 680px
+}
+
+.notes-list {
+    max-width: 760px
+}
+
+.note-card {
+    display: block;
+    padding: 0 0 28px 0;
+    margin: 0 0 28px 0;
+    border-bottom: 1px solid #ececf0;
+    text-decoration: none
+}
+
+.note-card:hover h2,
+.note-card:hover .note-read {
+    text-decoration: underline
+}
+
+.note-card h2 {
+    margin: 0 0 10px 0
+}
+
+.note-meta,
+.note-date {
+    color: #9a9da7;
+    font-size: 0.7em;
+    font-weight: 300;
+    line-height: 1.7em
+}
+
+.note-date {
+    display: block;
+    margin: 0 0 8px 0
+}
+
+.note-read {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    color: #595f6e;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-decoration: underline
+}
+
+.note-body {
+    max-width: 720px
+}
+
+.note-body h2 {
+    margin: 40px 0 14px 0
+}
+
+.note-body p {
+    margin: 0 0 18px 0
+}
+
+.note-body ul {
+    margin: 0 0 22px 22px;
+    list-style: disc
+}
+
+.note-body li {
+    color: #595f6e;
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.8em
+}
+
+.note-cta {
+    margin: 40px 0 0 0;
+    padding: 24px 0 0 0;
+    border-top: 1px solid #ececf0
+}
+
+.note-cta p {
+    color: #595f6e
+}
+
 @media (max-width: 1040px) {
     p {
         font-size: 0.7em
+    }
+
+    .note-body li {
+        font-size: 0.7em
+    }
+
+    .note-meta,
+    .note-date {
+        font-size: 0.65em
     }
 }
 
