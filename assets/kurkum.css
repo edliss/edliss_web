@@ -149,6 +149,101 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.2px;
 }
 
+/* Intent pages */
+
+.intent-page {
+  max-width: 800px;
+}
+
+.intent-header {
+  padding: clamp(24px, 6vw, 64px) 0 clamp(18px, 5vw, 42px);
+}
+
+.intent-title {
+  margin: 26px 0 14px;
+  max-width: 13ch;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.04;
+  font-size: 56px;
+}
+
+.intent-summary {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.intent-article {
+  max-width: 680px;
+  padding: clamp(20px, 5vw, 48px) 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.intent-article p,
+.intent-article li {
+  color: var(--fg);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.intent-article p {
+  margin: 0 0 20px;
+}
+
+.intent-article ul {
+  margin: 0 0 22px 22px;
+  padding: 0;
+}
+
+.intent-article a,
+.intent-related a,
+.related a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.intent-cta {
+  margin: 38px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.intent-cta p {
+  color: var(--muted);
+}
+
+.intent-related {
+  margin: 36px 0 0;
+}
+
+.intent-related h2,
+.related h2 {
+  margin: 0 0 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 20px;
+}
+
+.intent-related ul,
+.related ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intent-related li,
+.related li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
 /* Screenshots */
 
 .shots {
@@ -202,6 +297,28 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   letter-spacing: -0.02em;
   font-size: clamp(22px, 3vw, 30px);
+}
+
+/* Related pages */
+
+.related {
+  padding: clamp(18px, 5vw, 46px) 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .intent-title {
+    font-size: 40px;
+  }
+
+  .intent-summary {
+    font-size: 16px;
+  }
+
+  .intent-article p,
+  .intent-article li {
+    font-size: 16px;
+  }
 }
 
 /* Bottom CTA swap only (mobile badge, desktop QR) */
