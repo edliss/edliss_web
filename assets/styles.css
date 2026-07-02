@@ -335,6 +335,16 @@ p a {
     margin: 0 0 18px 0
 }
 
+.note-body blockquote {
+    margin: 6px 0 24px 0;
+    padding: 0 0 0 20px;
+    border-left: 2px solid #dadde5
+}
+
+.note-body blockquote p {
+    color: #333844
+}
+
 .note-body ul {
     margin: 0 0 22px 22px;
     list-style: disc

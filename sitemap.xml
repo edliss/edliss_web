@@ -86,9 +86,15 @@
   </url>
   <url>
     <loc>https://edliss.com/notes/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edliss.com/notes/the-cost-of-trying-to-be-helpful/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://edliss.com/notes/simple-is-hard/</loc>

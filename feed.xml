@@ -6,7 +6,14 @@
     <atom:link href="https://edliss.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Short notes about building simple, useful software and the ideas behind the apps Edliss makes.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Cost of Trying to Be Helpful</title>
+      <link>https://edliss.com/notes/the-cost-of-trying-to-be-helpful/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/the-cost-of-trying-to-be-helpful/</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Helpful software understands that attention is scarce, and knows when not to interrupt.</description>
+    </item>
     <item>
       <title>Simple Is Hard</title>
       <link>https://edliss.com/notes/simple-is-hard/</link>
