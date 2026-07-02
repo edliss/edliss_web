@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Edliss Notes</title>
+    <link>https://edliss.com/notes/</link>
+    <atom:link href="https://edliss.com/notes/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Notes on building thoughtful software.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Jul 2026 05:26:53 +0000</lastBuildDate>
+    <item>
+      <title>The Cost of Trying to Be Helpful</title>
+      <link>https://edliss.com/notes/the-cost-of-trying-to-be-helpful/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/the-cost-of-trying-to-be-helpful/</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Helpful software understands that attention is scarce, and knows when not to interrupt.</description>
+      <content:encoded>&lt;p&gt;Software has become very eager to help.&lt;/p&gt;
+
+    &lt;p&gt;Open an app and you're greeted with a product tour. Dismiss that and there's a prompt to enable notifications. A few minutes later you're asked to rate the app. Somewhere in the corner is a chat bubble waiting to answer questions you haven't asked. Before you leave, there's a reminder to subscribe to a newsletter.&lt;/p&gt;
+
+    &lt;p&gt;Each interruption is easy to justify on its own.&lt;/p&gt;
+
+    &lt;p&gt;Together, they make software feel exhausting.&lt;/p&gt;
+
+    &lt;p&gt;Most of these features exist with good intentions. Product tours reduce confusion. Notifications bring people back. AI suggestions promise to save time. Feedback prompts help developers improve the product.&lt;/p&gt;
+
+    &lt;p&gt;The problem isn't any single one of them.&lt;/p&gt;
+
+    &lt;p&gt;It's that every feature assumes your attention is available.&lt;/p&gt;
+
+    &lt;p&gt;Attention is one of the few things software can't ask for without taking it away from what you're trying to do.&lt;/p&gt;
+
+    &lt;p&gt;One reason this happens is that it's easy for the people building a product to overestimate their product's importance in someone else's day.&lt;/p&gt;
+
+    &lt;p&gt;After spending months or years building an app, every feature feels significant. Every announcement seems worth showing. Every improvement deserves attention.&lt;/p&gt;
+
+    &lt;p&gt;For the person using it, though, your app is often just one small stop in a much busier day. They aren't thinking about your roadmap, your latest release, or your engagement metrics. They simply want to accomplish a task and move on.&lt;/p&gt;
+
+    &lt;p&gt;Designing with that in mind leads to different decisions. You become more selective about when you interrupt, because you stop assuming your product deserves attention simply because it exists.&lt;/p&gt;
+
+    &lt;p&gt;Helpful software understands this. It waits. It stays out of the way until there's a genuine reason to interrupt.&lt;/p&gt;
+
+    &lt;p&gt;A spell checker highlights mistakes after you've written something. Navigation reroutes when traffic changes. A backup runs quietly in the background. These are helpful because they solve problems without demanding attention first.&lt;/p&gt;
+
+    &lt;p&gt;Whenever I'm building something, I try to ask one simple question:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;If we removed this interruption entirely, how many people would actually miss it?&lt;/strong&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Often, the answer is very few.&lt;/p&gt;
+
+    &lt;p&gt;The best software isn't the software that offers the most help.&lt;/p&gt;
+
+    &lt;p&gt;It's the software that knows when not to.&lt;/p&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Simple Is Hard</title>
+      <link>https://edliss.com/notes/simple-is-hard/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/simple-is-hard/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Simple software is not small by default. It is software shaped by decisions.</description>
+      <content:encoded>&lt;p&gt;I’ve always believed simple software is hard.&lt;/p&gt;
+
+    &lt;p&gt;Not because simple apps are small, but because simple software forces decisions. You have to decide what belongs, what does not, what should be hidden, and what should never exist in the first place.&lt;/p&gt;
+
+    &lt;p&gt;Adding features is often easier than refusing them. A feature can feel like progress. It gives you something visible to point at. But every feature also adds weight: another button, another state, another decision for the user, another thing to maintain.&lt;/p&gt;
+
+    &lt;p&gt;The software I like most is simple, usable, useful, and beautiful. Not decorative. Not empty. Not artificially minimal. Just clear about what it is trying to do.&lt;/p&gt;
+
+    &lt;p&gt;That is the kind of software I want Edliss to make.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href="https://edliss.com/kurkum/"&gt;Kurkum&lt;/a&gt;, for example, is not trying to become a complete cooking platform. It is a recipe app. It should help you save recipes, organise them, and cook from them. The closer it stays to that, the better it becomes.&lt;/p&gt;
+
+    &lt;p&gt;Simple does not mean unfinished. It means disciplined.&lt;/p&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Not Every App Needs an Account</title>
+      <link>https://edliss.com/notes/not-every-app-needs-an-account/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/not-every-app-needs-an-account/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Many useful apps work better when they ask less from the user.</description>
+      <content:encoded>&lt;p&gt;A lot of apps ask you to create an account before you can do anything meaningful.&lt;/p&gt;
+
+    &lt;p&gt;Sometimes that makes sense. If you are building a collaborative platform, a multi-user service, or something that genuinely depends on shared infrastructure, accounts are part of the product.&lt;/p&gt;
+
+    &lt;p&gt;But many apps ask for accounts simply because that became the default way software is built.&lt;/p&gt;
+
+    &lt;p&gt;I’ve never liked that assumption.&lt;/p&gt;
+
+    &lt;p&gt;Accounts also changed the incentives of many apps. Once an app has its own account system, it often starts collecting data that is useful to the business but not essential to the product. For some software, that may be justified. For many small personal utilities, I think it adds complexity without giving much back to the user.&lt;/p&gt;
+
+    &lt;p&gt;Most utility apps are personal tools. They help you organize something, remember something, learn something, or create something. In many cases, the app does not actually need its own user system, identity layer, profile management, or backend-driven account architecture.&lt;/p&gt;
+
+    &lt;p&gt;Apple platforms already provide a user identity through the device and iCloud account. For the kinds of apps I build, that is often enough.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href="https://edliss.com/kurkum/"&gt;Kurkum&lt;/a&gt;, for example, syncs recipes across a user’s devices through iCloud. There is no separate Kurkum account because I never felt there should be one. The app is personal. Your recipes belong to you. The system already knows who you are on your own devices.&lt;/p&gt;
+
+    &lt;p&gt;Avoiding accounts also changes the feel of software in ways I care about. The app becomes faster to enter, simpler to understand, and easier to trust. There are fewer passwords, fewer settings, fewer user-management flows, and fewer moments where the software asks you to “join” something before it becomes useful.&lt;/p&gt;
+
+    &lt;p&gt;There are tradeoffs, of course. Building this way means accepting certain platform boundaries. It also means intentionally not building some types of features. But constraints are often healthy for software. They force clarity.&lt;/p&gt;
+
+    &lt;p&gt;I increasingly believe many apps would improve if they asked less from the user.&lt;/p&gt;
+
+    &lt;p&gt;Not every piece of software needs to become a service.&lt;/p&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Software Should Not Feel Like Administration</title>
+      <link>https://edliss.com/notes/software-should-not-feel-like-administration/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/software-should-not-feel-like-administration/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Good software should make the next useful action feel obvious.</description>
+      <content:encoded>&lt;p&gt;A lot of software makes simple tasks feel like administration.&lt;/p&gt;
+
+    &lt;p&gt;You want to save a recipe, but first you have to fill out a form. You want to write a note, but first you have to choose a template. You want to organize something small, but suddenly the app gives you tags, categories, statuses, permissions, reminders, sharing options, and settings.&lt;/p&gt;
+
+    &lt;p&gt;There is a point where software stops helping and starts assigning work.&lt;/p&gt;
+
+    &lt;p&gt;I think about this a lot when building apps. The job of the interface is not to expose everything the system can do. The job is to make the next useful action feel obvious.&lt;/p&gt;
+
+    &lt;p&gt;In &lt;a href="https://edliss.com/kurkum/"&gt;Kurkum&lt;/a&gt;, that means recipe editing should feel closer to writing than data entry. Ingredients and steps should be easy to add. The structure should help, but not get in the way. A recipe app should not feel like managing a database.&lt;/p&gt;
+
+    &lt;p&gt;This is also why I prefer focused apps. When an app tries to handle every possible workflow, it often becomes slower, heavier, and less pleasant for the ordinary case.&lt;/p&gt;
+
+    &lt;p&gt;Good software should reduce effort.&lt;/p&gt;
+
+    &lt;p&gt;It should not make you feel like you are doing paperwork.&lt;/p&gt;</content:encoded>
+    </item>
+  </channel>
+</rss>

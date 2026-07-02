@@ -208,6 +208,10 @@ p a {
     max-width: 680px
 }
 
+.notes-feed {
+    margin: 12px 0 0 0
+}
+
 .apps-intro {
     max-width: 680px
 }
