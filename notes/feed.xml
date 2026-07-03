@@ -6,7 +6,35 @@
     <atom:link href="https://edliss.com/notes/feed.xml" rel="self" type="application/rss+xml" />
     <description>Notes on building thoughtful software.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 05:26:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 04:34:34 +0000</lastBuildDate>
+    <item>
+      <title>Feature Requests Are Design Feedback</title>
+      <link>https://edliss.com/notes/feature-requests-are-design-feedback/</link>
+      <guid isPermaLink="true">https://edliss.com/notes/feature-requests-are-design-feedback/</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Feature requests reveal where people are struggling, not just what they think you should build.</description>
+      <content:encoded>&lt;p&gt;One of the easiest traps in product development is thinking feature requests are about features.&lt;/p&gt;
+
+    &lt;p&gt;Most of the time, they aren't.&lt;/p&gt;
+
+    &lt;p&gt;When someone asks for a feature, they’re usually describing something that didn’t work the way they expected. The feature they’ve suggested is simply their best guess at how to fix it.&lt;/p&gt;
+
+    &lt;p&gt;That’s what makes them so valuable.&lt;/p&gt;
+
+    &lt;p&gt;Not because they tell you what to build, but because they reveal where people are struggling.&lt;/p&gt;
+
+    &lt;p&gt;The more interesting question isn’t, “Should we build this?”&lt;/p&gt;
+
+    &lt;p&gt;It's, “What happened that made someone ask for it?”&lt;/p&gt;
+
+    &lt;p&gt;Sometimes the answer is exactly the feature they requested.&lt;/p&gt;
+
+    &lt;p&gt;Sometimes it’s a confusing interface. Missing information. An unclear workflow. Or a default that doesn’t match how people actually use the product.&lt;/p&gt;
+
+    &lt;p&gt;The feature request tells you where to look.&lt;/p&gt;
+
+    &lt;p&gt;Understanding the problem tells you what to build.&lt;/p&gt;</content:encoded>
+    </item>
     <item>
       <title>The Cost of Trying to Be Helpful</title>
       <link>https://edliss.com/notes/the-cost-of-trying-to-be-helpful/</link>
