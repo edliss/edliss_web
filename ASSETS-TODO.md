@@ -1,4 +1,4 @@
-# Faux Amis image exports
+# False Friends image exports
 
 All required website assets are now present, including localized screenshots, the app icon, browser icons, the Apple touch icon, and localized 1200×630 social cards.
 
