@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://edliss.com/sitemap.xml
+Sitemap: https://edliss.com/stops/sitemap.xml

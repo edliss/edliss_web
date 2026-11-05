@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>如何将 Google Maps 已保存地点导入 Stops – Stops</title>
+  <meta name="description" content="将 Google Maps 中已保存和加星标的地点迁移到 iPhone 上的 Stops：用 Google Takeout 导出，再轻点几下导入 Saved Places.json。免费。">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://edliss.com/stops/zh-hans/guides/import-google-maps-saved-places.html">
+  <meta property="og:title" content="如何将 Google Maps 已保存地点导入 Stops">
+  <meta property="og:description" content="将 Google Maps 中已保存和加星标的地点迁移到 iPhone 上的 Stops：用 Google Takeout 导出，再轻点几下导入 Saved Places.json。免费。">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/app-icon.png">
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "如何将 Google Maps 已保存地点导入 Stops", "description": "将 Google Maps 中已保存和加星标的地点迁移到 iPhone 上的 Stops：用 Google Takeout 导出，再轻点几下导入 Saved Places.json。免费。", "step": [{"@type": "HowToStep", "position": 1, "name": "向 Google Takeout 索取你的地点", "text": "前往 takeout.google.com 并登录。选择取消全选，然后只勾选地图（您的地点）。格式保留为 JSON。不要选择单独的地图或已保存条目：它们包含其他内容，而且“已保存”列表不含位置信息。"}, {"@type": "HowToStep", "position": 2, "name": "创建导出", "text": "选择下一步，保留导出一次，然后选择创建导出。Google 会通过电子邮件向你发送下载链接，通常几分钟内就能收到。"}, {"@type": "HowToStep", "position": 3, "name": "将文件存储到 iPhone", "text": "从 Google 的邮件中下载 zip 文件，在“文件” App 中打开并解压。在 Takeout › 地图（您的地点）中，你会找到 Saved Places.json。文件名会随你的 Google 语言而变化，因此可能叫别的名字，例如 Gespeicherte Orte.json。如果你在 Google Maps 中使用了标签，可能还会有 Labeled places.json。Stops 也会读取它。"}, {"@type": "HowToStep", "position": 4, "name": "在 Stops 中打开导入", "text": "从标签栏末端的书本按钮打开手记，然后轻点设置齿轮按钮。选择导入，再选择 Google Takeout，然后选取 Saved Places.json。", "image": "https://edliss.com/stops/images/guides/import-menu.jpg"}, {"@type": "HowToStep", "position": 5, "name": "检查地点并导入", "text": "Stops 会在存储任何内容之前显示找到的每个地点。取消勾选不想要的地点。你已有的地点会标记为已存储，并被排除在外。在添加到下，保留新建列表将它们放入一个单独的列表，或选择你的某个列表。然后轻点导入。", "image": "https://edliss.com/stops/images/guides/import-takeout.jpg"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Stops", "item": "https://edliss.com/stops/zh-hans/index.html"}, {"@type": "ListItem", "position": 2, "name": "指南", "item": "https://edliss.com/stops/zh-hans/guides/index.html"}, {"@type": "ListItem", "position": 3, "name": "Google Maps 已保存地点", "item": "https://edliss.com/stops/zh-hans/guides/import-google-maps-saved-places.html"}]}</script>
+  <!-- l10n:alternates -->
+  <link rel="alternate" hreflang="en" href="https://edliss.com/stops/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="de" href="https://edliss.com/stops/de/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="fr" href="https://edliss.com/stops/fr/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="es-ES" href="https://edliss.com/stops/es/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="es-419" href="https://edliss.com/stops/es-mx/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="it" href="https://edliss.com/stops/it/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://edliss.com/stops/pt-br/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="ja" href="https://edliss.com/stops/ja/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="ko" href="https://edliss.com/stops/ko/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://edliss.com/stops/zh-hans/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://edliss.com/stops/zh-hant/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="x-default" href="https://edliss.com/stops/guides/import-google-maps-saved-places.html">
+  <!-- /l10n:alternates -->
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <img class="icon-light" src="../../images/app-icon.png" alt="">
+        <img class="icon-dark" src="../../images/app-icon-dark.png" alt="">
+        Stops
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a class="optional" href="../index.html#features">功能</a>
+        <a aria-current="page" href="../guides/index.html">指南</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../support.html">支持</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <p class="breadcrumb"><a href="index.html">指南</a></p>
+    <h1>如何将 Google Maps 已保存地点导入 Stops</h1>
+    <p class="lede">Google Maps 没有导出已保存地点的按钮，但 Google Takeout 可以为你提供一份副本文件。Stops 会读取该文件，保留每个地点的名称、地址、备注和你保存它的日期。</p>
+    <ul class="guide-facts"><li>免费</li><li>约 10 分钟</li><li>iPhone 和 iPad</li></ul>
+
+    <h2>所需条件</h2>
+    <ul><li>你在 Google Maps 中使用的 Google 账号。</li><li>iPhone 或 iPad 上的 Stops。</li></ul>
+
+    <h2>分步说明</h2>
+    <ol class="steps">
+      <li class="step">
+        <!-- Screenshot wanted: images/guides/takeout-select.jpg: Google Takeout with only Maps (your places) ticked -->
+        <div class="step-copy">
+          <h3>向 Google Takeout 索取你的地点</h3>
+          <p>前往 <a href="https://takeout.google.com">takeout.google.com</a> 并登录。选择<strong>取消全选</strong>，然后只勾选<strong>地图（您的地点）</strong>。格式保留为 JSON。</p><p>不要选择单独的<strong>地图</strong>或<strong>已保存</strong>条目：它们包含其他内容，而且“已保存”列表不含位置信息。</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>创建导出</h3>
+          <p>选择<strong>下一步</strong>，保留<strong>导出一次</strong>，然后选择<strong>创建导出</strong>。Google 会通过电子邮件向你发送下载链接，通常几分钟内就能收到。</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>将文件存储到 iPhone</h3>
+          <p>从 Google 的邮件中下载 zip 文件，在“文件” App 中打开并解压。在 <strong>Takeout › 地图（您的地点）</strong>中，你会找到 <strong>Saved Places.json</strong>。文件名会随你的 Google 语言而变化，因此可能叫别的名字，例如 Gespeicherte Orte.json。</p><p>如果你在 Google Maps 中使用了标签，可能还会有 <strong>Labeled places.json</strong>。Stops 也会读取它。</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>在 Stops 中打开导入</h3>
+          <p>从标签栏末端的书本按钮打开<strong>手记</strong>，然后轻点<strong>设置</strong>齿轮按钮。选择<strong>导入</strong>，再选择 <strong>Google Takeout</strong>，然后选取 Saved Places.json。</p>
+        </div>
+          <div class="phone" role="img" aria-label="Stops 中的导入屏幕，列出 GPX 文件、Google Takeout、Apple 地图指南，以及来自“照片”和 Google Timeline 的到访">
+            <div class="screen">
+              <img class="shot" src="../../images/guides/import-menu.jpg" alt="" width="640" height="1391" loading="lazy">
+            </div>
+          </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>检查地点并导入</h3>
+          <p>Stops 会在存储任何内容之前显示找到的每个地点。取消勾选不想要的地点。你已有的地点会标记为<strong>已存储</strong>，并被排除在外。</p><p>在<strong>添加到</strong>下，保留<strong>新建列表</strong>将它们放入一个单独的列表，或选择你的某个列表。然后轻点<strong>导入</strong>。</p>
+        </div>
+          <div class="phone" role="img" aria-label="Stops 中的导入预览，显示 Saved Places.json 中的十个里斯本地点，其中两个已存储">
+            <div class="screen">
+              <img class="shot" src="../../images/guides/import-takeout.jpg" alt="" width="640" height="1391" loading="lazy">
+            </div>
+          </div>
+      </li>
+    </ol>
+
+    <h2>须知</h2>
+    <ul><li>较新的 Takeout 文件常常不包含地点的位置。这时 Stops 会根据名称和地址在 Apple 地图中查找，文件较长时需要一点时间。</li><li>Stops 会尽可能为每个地点分配类别，比如面包店归入“餐饮”，海滩归入“海滩”。</li><li>导入免费，除了 Apple 地图查询外，没有任何内容会离开你的设备。</li></ul>
+
+    <h2>更多指南</h2>
+    <div class="guide-list"><a href="import-apple-maps-guide.html"><strong>Apple 地图指南</strong><span>把你在 Apple 地图中创建的指南变成停靠点列表。</span></a><a href="import-gpx-file.html"><strong>GPX 文件</strong><span>将徒步、骑行和 GPS App 中的航点导入为停靠点。</span></a><a href="import-google-timeline.html"><strong>Google Maps Timeline</strong><span>从 Google Maps Timeline 导出文件中补全多年的过往到访。</span></a></div>
+
+    <div class="contact-card">
+      <h2>获取 Stops</h2>
+      <p>每一处值得停下的地方，尽在 iPhone、iPad、Mac 和 Apple Watch。</p>
+      <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="在 App Store 预订 Stops">
+        <picture>
+          <source srcset="/assets/badges/pre-order-zh-hans-white.svg" media="(prefers-color-scheme: dark)">
+          <img src="/assets/badges/pre-order-zh-hans-black.svg" alt="在 App Store 预订" width="134" height="50">
+        </picture>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Copyright © 2026 <a href="/apps/">Edliss LLC</a>。保留所有权利。</span>
+      <nav aria-label="页脚">
+        <a href="../index.html">首页</a>
+        <a href="../guides/index.html">指南</a>
+        <a href="../privacy.html">隐私</a>
+        <a href="../support.html">支持</a>
+      </nav>
+      <!-- l10n:languages -->
+      <details class="lang-menu" translate="no">
+        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>简体中文</summary>
+        <ul>
+          <li><a href="/stops/guides/import-google-maps-saved-places.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="/stops/de/guides/import-google-maps-saved-places.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/stops/fr/guides/import-google-maps-saved-places.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/stops/es/guides/import-google-maps-saved-places.html" hreflang="es-ES" lang="es-ES">Español (España)</a></li>
+          <li><a href="/stops/es-mx/guides/import-google-maps-saved-places.html" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a></li>
+          <li><a href="/stops/it/guides/import-google-maps-saved-places.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/stops/pt-br/guides/import-google-maps-saved-places.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+          <li><a href="/stops/ja/guides/import-google-maps-saved-places.html" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/stops/ko/guides/import-google-maps-saved-places.html" hreflang="ko" lang="ko">한국어</a></li>
+          <li><a href="/stops/zh-hans/guides/import-google-maps-saved-places.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a></li>
+          <li><a href="/stops/zh-hant/guides/import-google-maps-saved-places.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+        </ul>
+      </details>
+      <!-- /l10n:languages -->
+    </div>
+  </footer>
+
+</body>
+</html>

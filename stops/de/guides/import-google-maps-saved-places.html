@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>So importierst du deine gespeicherten Orte aus Google Maps in Stops – Stops</title>
+  <meta name="description" content="Bring deine gespeicherten und markierten Orte von Google Maps zu Stops auf dem iPhone: Exportiere sie mit Google Takeout und importiere dann Saved Places.json mit wenigen Tippen. Kostenlos.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://edliss.com/stops/de/guides/import-google-maps-saved-places.html">
+  <meta property="og:title" content="So importierst du deine gespeicherten Orte aus Google Maps in Stops">
+  <meta property="og:description" content="Bring deine gespeicherten und markierten Orte von Google Maps zu Stops auf dem iPhone: Exportiere sie mit Google Takeout und importiere dann Saved Places.json mit wenigen Tippen. Kostenlos.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/app-icon.png">
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "So importierst du deine gespeicherten Orte aus Google Maps in Stops", "description": "Bring deine gespeicherten und markierten Orte von Google Maps zu Stops auf dem iPhone: Exportiere sie mit Google Takeout und importiere dann Saved Places.json mit wenigen Tippen. Kostenlos.", "step": [{"@type": "HowToStep", "position": 1, "name": "Fordere deine Orte bei Google Takeout an", "text": "Gehe zu takeout.google.com und melde dich an. Wähle Auswahl aufheben und setze dann nur bei Maps (Meine Orte) ein Häkchen. Lass das Format auf JSON.Wähle nicht die separaten Einträge Maps oder Gespeichert: Sie enthalten andere Dinge, und die gespeicherten Listen kommen ohne Positionen."}, {"@type": "HowToStep", "position": 2, "name": "Export erstellen", "text": "Wähle Nächster Schritt, behalte Einmal exportieren und wähle Export erstellen. Google schickt dir einen Download-Link per E-Mail, meist innerhalb weniger Minuten."}, {"@type": "HowToStep", "position": 3, "name": "Sichere die Datei auf deinem iPhone", "text": "Lade die ZIP-Datei aus Googles E-Mail und öffne sie in der App „Dateien“, um sie zu entpacken. In Takeout › Maps (Meine Orte) findest du Saved Places.json. Der Name richtet sich nach deiner Google-Sprache, auf Deutsch heißt die Datei zum Beispiel Gespeicherte Orte.json.Wenn du in Google Maps Labels verwendest, gibt es vielleicht auch Labeled places.json. Stops liest auch diese Datei."}, {"@type": "HowToStep", "position": 4, "name": "Öffne „Importieren“ in Stops", "text": "Öffne Journal über die Buch-Taste am Ende der Tableiste und tippe auf das Zahnrad für die Einstellungen. Wähle Importieren, dann Google Takeout, und wähle Saved Places.json.", "image": "https://edliss.com/stops/images/guides/import-menu.jpg"}, {"@type": "HowToStep", "position": 5, "name": "Orte prüfen und importieren", "text": "Stops zeigt jeden gefundenen Ort, bevor etwas gesichert wird. Entferne das Häkchen bei allen, die du nicht willst. Orte, die du schon hast, sind als Bereits gesichert markiert und werden ausgelassen.Behalte unter Hinzufügen zu die Option Neue Liste, um sie in eine eigene Liste zu legen, oder wähle eine deiner Listen. Tippe dann auf Importieren.", "image": "https://edliss.com/stops/images/guides/import-takeout.jpg"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Stops", "item": "https://edliss.com/stops/de/index.html"}, {"@type": "ListItem", "position": 2, "name": "Anleitungen", "item": "https://edliss.com/stops/de/guides/index.html"}, {"@type": "ListItem", "position": 3, "name": "Gespeicherte Orte aus Google Maps", "item": "https://edliss.com/stops/de/guides/import-google-maps-saved-places.html"}]}</script>
+  <!-- l10n:alternates -->
+  <link rel="alternate" hreflang="en" href="https://edliss.com/stops/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="de" href="https://edliss.com/stops/de/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="fr" href="https://edliss.com/stops/fr/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="es-ES" href="https://edliss.com/stops/es/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="es-419" href="https://edliss.com/stops/es-mx/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="it" href="https://edliss.com/stops/it/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://edliss.com/stops/pt-br/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="ja" href="https://edliss.com/stops/ja/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="ko" href="https://edliss.com/stops/ko/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://edliss.com/stops/zh-hans/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://edliss.com/stops/zh-hant/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="x-default" href="https://edliss.com/stops/guides/import-google-maps-saved-places.html">
+  <!-- /l10n:alternates -->
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <img class="icon-light" src="../../images/app-icon.png" alt="">
+        <img class="icon-dark" src="../../images/app-icon-dark.png" alt="">
+        Stops
+      </a>
+      <nav class="nav-links" aria-label="Hauptbereich">
+        <a class="optional" href="../index.html#features">Funktionen</a>
+        <a aria-current="page" href="../guides/index.html">Anleitungen</a>
+        <a href="../privacy.html">Datenschutz</a>
+        <a href="../support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <p class="breadcrumb"><a href="index.html">Anleitungen</a></p>
+    <h1>So importierst du deine gespeicherten Orte aus Google Maps in Stops</h1>
+    <p class="lede">Google Maps hat keine Export-Taste für deine gespeicherten Orte, aber Google Takeout kann dir eine Kopie davon als Datei geben. Stops liest diese Datei und behält von jedem Ort Name, Adresse, Notiz und das Datum, an dem du ihn gespeichert hast.</p>
+    <ul class="guide-facts"><li>Kostenlos</li><li>Etwa 10 Minuten</li><li>iPhone und iPad</li></ul>
+
+    <h2>Was du brauchst</h2>
+    <ul><li>Das Google-Konto, das du in Google Maps verwendest.</li><li>Stops auf deinem iPhone oder iPad.</li></ul>
+
+    <h2>Schritt für Schritt</h2>
+    <ol class="steps">
+      <li class="step">
+        <!-- Screenshot wanted: images/guides/takeout-select.jpg: Google Takeout with only Maps (your places) ticked -->
+        <div class="step-copy">
+          <h3>Fordere deine Orte bei Google Takeout an</h3>
+          <p>Gehe zu <a href="https://takeout.google.com">takeout.google.com</a> und melde dich an. Wähle <strong>Auswahl aufheben</strong> und setze dann nur bei <strong>Maps (Meine Orte)</strong> ein Häkchen. Lass das Format auf JSON.</p><p>Wähle nicht die separaten Einträge <strong>Maps</strong> oder <strong>Gespeichert</strong>: Sie enthalten andere Dinge, und die gespeicherten Listen kommen ohne Positionen.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>Export erstellen</h3>
+          <p>Wähle <strong>Nächster Schritt</strong>, behalte <strong>Einmal exportieren</strong> und wähle <strong>Export erstellen</strong>. Google schickt dir einen Download-Link per E-Mail, meist innerhalb weniger Minuten.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>Sichere die Datei auf deinem iPhone</h3>
+          <p>Lade die ZIP-Datei aus Googles E-Mail und öffne sie in der App „Dateien“, um sie zu entpacken. In <strong>Takeout › Maps (Meine Orte)</strong> findest du <strong>Saved Places.json</strong>. Der Name richtet sich nach deiner Google-Sprache, auf Deutsch heißt die Datei zum Beispiel Gespeicherte Orte.json.</p><p>Wenn du in Google Maps Labels verwendest, gibt es vielleicht auch <strong>Labeled places.json</strong>. Stops liest auch diese Datei.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>Öffne „Importieren“ in Stops</h3>
+          <p>Öffne <strong>Journal</strong> über die Buch-Taste am Ende der Tableiste und tippe auf das Zahnrad für die <strong>Einstellungen</strong>. Wähle <strong>Importieren</strong>, dann <strong>Google Takeout</strong>, und wähle Saved Places.json.</p>
+        </div>
+          <div class="phone" role="img" aria-label="Der Bildschirm „Importieren“ in Stops mit GPX-Datei, Google Takeout, Apple Karten-Reiseführer sowie Besuchen aus „Fotos“ und Google Timeline">
+            <div class="screen">
+              <img class="shot" src="../../images/guides/import-menu.jpg" alt="" width="640" height="1391" loading="lazy">
+            </div>
+          </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>Orte prüfen und importieren</h3>
+          <p>Stops zeigt jeden gefundenen Ort, bevor etwas gesichert wird. Entferne das Häkchen bei allen, die du nicht willst. Orte, die du schon hast, sind als <strong>Bereits gesichert</strong> markiert und werden ausgelassen.</p><p>Behalte unter <strong>Hinzufügen zu</strong> die Option <strong>Neue Liste</strong>, um sie in eine eigene Liste zu legen, oder wähle eine deiner Listen. Tippe dann auf <strong>Importieren</strong>.</p>
+        </div>
+          <div class="phone" role="img" aria-label="Die Importprüfung in Stops, mit zehn Orten in Lissabon aus Saved Places.json, zwei davon bereits gesichert">
+            <div class="screen">
+              <img class="shot" src="../../images/guides/import-takeout.jpg" alt="" width="640" height="1391" loading="lazy">
+            </div>
+          </div>
+      </li>
+    </ol>
+
+    <h2>Gut zu wissen</h2>
+    <ul><li>Neuere Takeout-Dateien lassen oft weg, wo ein Ort liegt. Stops findet ihn dann in Apple Karten anhand von Name und Adresse, was bei einer langen Datei einen Moment dauert.</li><li>Stops gibt jedem Ort eine Kategorie, wenn es sie erkennen kann – eine Bäckerei kommt also als Essen an, ein Strand als Strand.</li><li>Der Import ist kostenlos, und nichts verlässt dein Gerät außer den Abfragen bei Apple Karten.</li></ul>
+
+    <h2>Weitere Anleitungen</h2>
+    <div class="guide-list"><a href="import-apple-maps-guide.html"><strong>Apple Karten-Reiseführer</strong><span>Mach aus einem Reiseführer, den du in Apple Karten erstellt hast, eine Liste mit Stopps.</span></a><a href="import-gpx-file.html"><strong>GPX-Dateien</strong><span>Hol Wegpunkte aus Wander-, Rad- und GPS-Apps als Stopps herein.</span></a><a href="import-google-timeline.html"><strong>Google Maps Timeline</strong><span>Fülle Jahre vergangener Besuche aus dem Export deiner Google Maps Timeline aus.</span></a></div>
+
+    <div class="contact-card">
+      <h2>Stops laden</h2>
+      <p>Alle Orte, die einen Stopp wert sind – auf iPhone, iPad, Mac und Apple Watch.</p>
+      <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="Stops im App Store vorbestellen">
+        <picture>
+          <source srcset="/assets/badges/pre-order-de-white.svg" media="(prefers-color-scheme: dark)">
+          <img src="/assets/badges/pre-order-de-black.svg" alt="Im App Store vorbestellen" width="147" height="50">
+        </picture>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Copyright © 2026 <a href="/apps/">Edliss LLC</a>. Alle Rechte vorbehalten.</span>
+      <nav aria-label="Fußzeile">
+        <a href="../index.html">Start</a>
+        <a href="../guides/index.html">Anleitungen</a>
+        <a href="../privacy.html">Datenschutz</a>
+        <a href="../support.html">Support</a>
+      </nav>
+      <!-- l10n:languages -->
+      <details class="lang-menu" translate="no">
+        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Deutsch</summary>
+        <ul>
+          <li><a href="/stops/guides/import-google-maps-saved-places.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="/stops/de/guides/import-google-maps-saved-places.html" hreflang="de" lang="de" aria-current="true">Deutsch</a></li>
+          <li><a href="/stops/fr/guides/import-google-maps-saved-places.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/stops/es/guides/import-google-maps-saved-places.html" hreflang="es-ES" lang="es-ES">Español (España)</a></li>
+          <li><a href="/stops/es-mx/guides/import-google-maps-saved-places.html" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a></li>
+          <li><a href="/stops/it/guides/import-google-maps-saved-places.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/stops/pt-br/guides/import-google-maps-saved-places.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+          <li><a href="/stops/ja/guides/import-google-maps-saved-places.html" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/stops/ko/guides/import-google-maps-saved-places.html" hreflang="ko" lang="ko">한국어</a></li>
+          <li><a href="/stops/zh-hans/guides/import-google-maps-saved-places.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          <li><a href="/stops/zh-hant/guides/import-google-maps-saved-places.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+        </ul>
+      </details>
+      <!-- /l10n:languages -->
+    </div>
+  </footer>
+
+</body>
+</html>

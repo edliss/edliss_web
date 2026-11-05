@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stops – 立ち寄りたい場所を、ひとつ残らず</title>
+  <meta name="description" content="Stopsは、立ち寄りたい場所を覚えておくApp。スポットはワンタップで保存。Stopsは出かけた場所をそっと記録し、遠出した日々を旅行にまとめ、次の旅の天気予報も用意します。アカウントもサーバーも不要で、すべてはあなた自身のiCloudに。iPhone、iPad、Mac、Apple Watchに対応。">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://edliss.com/stops/ja/">
+  <link rel="icon" type="image/png" href="../images/app-icon.png">
+  <link rel="apple-touch-icon" href="../images/app-icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <!-- l10n:alternates -->
+  <link rel="alternate" hreflang="en" href="https://edliss.com/stops/index.html">
+  <link rel="alternate" hreflang="de" href="https://edliss.com/stops/de/index.html">
+  <link rel="alternate" hreflang="fr" href="https://edliss.com/stops/fr/index.html">
+  <link rel="alternate" hreflang="es-ES" href="https://edliss.com/stops/es/index.html">
+  <link rel="alternate" hreflang="es-419" href="https://edliss.com/stops/es-mx/index.html">
+  <link rel="alternate" hreflang="it" href="https://edliss.com/stops/it/index.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://edliss.com/stops/pt-br/index.html">
+  <link rel="alternate" hreflang="ja" href="https://edliss.com/stops/ja/index.html">
+  <link rel="alternate" hreflang="ko" href="https://edliss.com/stops/ko/index.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://edliss.com/stops/zh-hans/index.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://edliss.com/stops/zh-hant/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://edliss.com/stops/index.html">
+  <!-- /l10n:alternates -->
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img class="icon-light" src="../images/app-icon.png" alt="">
+        <img class="icon-dark" src="../images/app-icon-dark.png" alt="">
+        Stops
+      </a>
+      <nav class="nav-links" aria-label="メイン">
+        <a class="optional" href="#features">機能</a>
+        <a href="guides/index.html">ガイド</a>
+        <a class="optional" href="#privacy">プライバシー</a>
+        <a href="support.html">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- MARK: Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <img class="hero-icon icon-light" src="../images/app-icon.png" alt="Stopsのアプリアイコン">
+        <img class="hero-icon icon-dark" src="../images/app-icon-dark.png" alt="Stopsのアプリアイコン">
+        <h1><span class="accent">立ち寄りたい</span>場所を、<br>ひとつ残らず。</h1>
+        <p class="lede">スポットはワンタップで保存。Stopsは出かけた場所をそっと記録して、遠出した日々を旅行にまとめ、次の旅の天気予報も用意しておきます。あなたは冒険を楽しむだけ。</p>
+        <p class="trust"><svg class="trust-shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>アカウントは不要。私たちのサーバーもありません。すべてはあなた自身のiCloudに。</p>
+        <div class="cta-row">
+          <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="App StoreでStopsを予約注文">
+            <picture>
+              <source srcset="/assets/badges/pre-order-ja-white.svg" media="(prefers-color-scheme: dark)">
+              <img src="/assets/badges/pre-order-ja-black.svg" alt="App Storeで予約注文" width="134" height="50">
+            </picture>
+          </a>
+          <a class="button button-secondary" href="#features">機能を見る</a>
+        </div>
+        <p class="platforms">12月1日、iPhone、iPad、Mac、Apple Watchに登場</p>
+
+        <div class="devices" aria-hidden="true">
+
+          <!-- Stop -->
+          <div class="phone side left">
+            <div class="screen">
+              <img class="shot" src="../images/screens/stop.jpg" alt="" width="640" height="1391">
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="phone">
+            <div class="screen">
+              <img class="shot" src="../images/screens/map.jpg" alt="" width="640" height="1391">
+            </div>
+          </div>
+
+          <!-- Road trip list -->
+          <div class="phone side right">
+            <div class="screen">
+              <img class="shot" src="../images/screens/road.jpg" alt="" width="640" height="1391">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Made for the road -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">旅の道すがらに</span>
+          <h2>マップAppは目的地まで連れて行ってくれる。Stopsは、その場所を覚えておいてくれる。</h2>
+          <p>マップAppはナビのために作られているので、自分だけの場所を保存するにはどうしても手間がかかります。Stopsは、道中で見つけた場所のためのApp。静かなキャンプ地、お茶を淹れたくなる景色、また歩きたいハイキングコース、何でもそろっていたあのお店。見つけたら保存すれば、次に近くを通ったときに待っています。</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>また戻ってきたい場所を、保存しよう。</h3>
+            <p>静かな湖、思わず車を停めた絶景、何でもそろっていたあのお店。ワンタップで地図上のスポットになり、未来の自分へのメモも添えられます。次に近くを通るとき、そこにあることがすぐにわかります。</p>
+            <ul>
+              <li>各スポットまでの距離がわかり、お気に入りのナビAppでワンタップで経路を表示</li>
+              <li>ウィジェット、Siri、Apple Watchから、Appを開かずに現在地を保存</li>
+              <li>Spotlight、Siri、ビジュアルインテリジェンスからどのスポットもすぐに見つかる</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/stop.jpg" alt="Point Sublime展望台のスポットカード。メモ、ピン、訪問が表示されている" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="feature-copy">
+            <h3>計画にも、共有にも使えるリスト。</h3>
+            <p>ロードトリップ、週末の小旅行、食べ歩きのために、スポットをリストにまとめましょう。車に乗っているみんなとリストを共有すれば、誰でも追加できます。</p>
+            <ul>
+              <li>共有リストはiCloudで同期され、ほかの人が追加した場所もわかります</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/road.jpg" alt="Gorges du Verdonのリスト。渓谷周辺のキャンプ場、泳げる場所、展望台が並んでいる" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>ブログやほかのAppから場所を取り込もう。</h3>
+            <p>ブログで見つけたベーカリー、友だちが教えてくれたバー、Googleマップのリスト丸ごと、Appleマップのガイド。Stopsに共有すれば、地図に載ります。リンクをコピーしただけでも、Appに戻るとStopsが気づいて保存を提案します。</p>
+            <ul>
+              <li>どのAppからでも共有シートで使えます</li>
+              <li>AppleマップやGoogleマップのリンク、住所、座標を理解します</li>
+              <li>名前、住所、カテゴリは自動で入力</li>
+              <li>Appleマップのガイド、Google Takeout、GPXファイルの読み込みは、誰でも無料（<a href="guides/index.html">方法を見る</a>）</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/clipboard.jpg" alt="クリップボードで見つかったリンクの保存を提案する地図" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: On its own -->
+    <section id="timeline" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">おまかせで</span>
+          <h2>Stopsが覚えているから、あなたは覚えなくていい。</h2>
+          <p>タイムラインを一度オンにすれば、あとは何もする必要はありません。実際に出かけた場所から、日々の記録、旅行、国が自動で埋まっていき、書き留めることは何もありません。あとでソファでくつろぎながら、気に入った場所をワンタップでスポットにできます。</p>
+        </div>
+
+        <div class="feature flip">
+          <div class="feature-copy">
+            <h3>行った場所を、一日ずつ。</h3>
+            <p>Stopsは過ごした場所をそっと記録するので、旅のどの日でも振り返れます。行った場所はあなただけのもの。データはあなたのデバイスとあなた自身のiCloudにあり、何かが収集されたり、どこかに送信されたりすることは一切ありません。</p>
+            <ul>
+              <li>一日ごとに地図と訪問のリストで表示</li>
+              <li>訪問ごとにその時の天気も</li>
+              <li>訪れた場所を、その日の記録からそのままスポットとして保存</li>
+              <li>アカウントなし、サーバーなし、分析なし。あなたのタイムラインを見られるのはあなただけ</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/timeline.jpg" alt="Vercorsを抜けてVerdonへ下る、旅の一日のタイムライン" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>何年分もの旅を、写真から。<span class="pro-tag">Pro</span></h3>
+            <p>Appを使い始める前、何年も前に撮った写真から、Stopsがタイムライン、旅行、国を埋めてくれます。さらに、どのスポットのカードにも、そこで撮った写真が並びます。</p>
+            <ul>
+              <li>写真はライブラリに残ったまま。コピー、保存、アップロードは一切しません</li>
+              <li>追加する前に、見つかった内容を確認できます</li>
+              <li>スポットを開くと、そこで撮った写真がすべての訪問から表示されます</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone-pair">
+              <div class="phone back">
+                <div class="screen">
+                  <img class="shot" src="../images/screens/photo-visits.jpg" alt="“写真”から読み込む画面。2014年から2025年までの120日間で412件の訪問が見つかった" loading="lazy" width="640" height="1391">
+                </div>
+              </div>
+              <div class="phone front">
+                <div class="screen">
+                  <img class="shot" src="../images/screens/photos-stop.jpg" alt="Lac d’Allosのスポットカード。そこで撮った写真が表示されている" loading="lazy" width="640" height="1391">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="feature-copy">
+            <h3>あなたの旅行を、自動でまとめて。<span class="pro-tag">Pro</span></h3>
+            <p>自宅を離れて何泊かすると、Stopsがその日々を旅行にまとめます。地図、訪れた町、数字、写真もいっしょに。</p>
+            <ul>
+              <li>帰宅すると、旅行の中から残しておきたい場所をStopsが選び出し、どれもワンタップでスポットになります</li>
+              <li>旅行を地図の画像で共有</li>
+              <li>国ごとに専用のジャーナルがあり、訪れた町、旅行、よく行った場所、スポットがまとまります</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/trip.jpg" alt="ロードトリップのページ。地図、数字、ストーリー、日ごとの記録" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>そして、国ごとにワッペンを。</h3>
+            <p>新しい国に入ると、その国の刺しゅうワッペンが手に入ります。外へ出かけたことへの、ちょっとしたごほうびです。</p>
+          </div>
+          <div class="feature-visual">
+            <div class="patch-cloud" aria-hidden="true">
+              <img src="../images/patch-fr.png" alt="">
+              <img src="../images/patch-it.png" alt="">
+              <img src="../images/patch-is.png" alt="">
+              <img src="../images/patch-pt.png" alt="">
+              <img src="../images/patch-jp.png" alt="">
+              <img src="../images/patch-ma.png" alt="">
+              <img src="../images/patch-mx.png" alt="">
+              <img src="../images/patch-br.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Plan the next one -->
+    <section id="plan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">次の旅を計画</span>
+          <h2>次の旅は、お気に入りの場所から始まる。</h2>
+          <p>保存したスポットは、どれも週末の行き先候補です。Stopsはそれぞれに天気予報を表示し、天気の良い順に並べ、ドライブの途中にあるスポットも見つけます。</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>すべてのスポットに天気予報を。<span class="pro-tag">Pro</span></h3>
+            <p>日帰り旅行の行き先を比べるには、これまでは場所ごとにブラウザのタブを開くか、天気Appから地図に移って場所を探し、また天気Appに戻る必要がありました。Stopsならスポットを開けば天気がすぐそこに。1時間ごとの予報、1週間の予報、日の出と日の入りの時刻まで表示されるので、日が暮れるまでの残り時間も、日の出に合わせて目覚ましをかける時刻も、夕日の写真を撮るために着いておきたい時間もわかります。</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/weather.jpg" alt="アクロポリスのスポットページと天気予報：おおむね晴れ、20度、日の入り午後4:23" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="feature-copy">
+            <h3>この週末、どこへ行こう。<span class="pro-tag">Pro</span></h3>
+            <p>日にちを選ぶと、行ける範囲にある保存済みのスポットを天気の良い順にStopsが並べ、その日の最高気温、最低気温、降水確率も表示します。湖にするか展望台にするか、ひと目で決まります。</p>
+            <ul>
+              <li>行きたい場所の種類で絞り込み</li>
+              <li>まだ行ったことのない近くの町もあわせて提案</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/where-to-go.jpg" alt="おでかけ先に、土曜日の保存済みスポットがそれぞれの天気予報とともに並んでいる" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>目的地までの道中にある、あなたのスポット。</h3>
+            <p>どこかへお出かけですか？Stopsはドライブの途中にある保存済みの場所を、たどり着く順に、道路からどれくらい離れているかとあわせて表示します。行きたい場所にチェックを入れれば、すべてを経由する経路が表示されます。</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/on-the-way.jpg" alt="Point Sublimeまでの途中のスポット。パリからのルートと沿道の13か所のスポット" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="feature-copy">
+            <h3>歩くルートまで考えてくれる旅程。<span class="pro-tag">Pro</span></h3>
+            <p>リストのスポットを訪れる順に並べると、スポット間の徒歩ルートが表示され、ルート全体が地図に描かれます。長いリストは日ごとに分かれます。</p>
+            <ul>
+              <li>スポットに着くと、自動でチェックが付きます</li>
+              <li>作った旅程は、Proでなくてもずっと使えます</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/itinerary.jpg" alt="マレ地区を歩く旅程。地図上の徒歩ルートと各スポット間の徒歩区間" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Everywhere -->
+    <section id="everywhere" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">あらゆる場所で</span>
+          <h2>必要なときに、すぐそこに。</h2>
+          <p>ひとつのAppが、あなたのiCloudで同期され、あなたのすべての画面で使えます。</p>
+        </div>
+      </div>
+
+      <!--
+        Platform showcase: scrolls sideways, snaps to each device. Every
+        device wears its real bezel (iPhone 18 Pro, iPhone Duo, iPad Air 13",
+        iMac 24", Apple Watch Ultra 3). Screenshots come from the simulators
+        via ScreenshotTests.testCapturePlatformScreenshots (Design/PlatformScreens),
+        the Watch from the paired watch simulator, and the Mac from the app
+        itself run on My Mac (Designed for iPad) with -saveWindowScreenshot,
+        which draws its window at the iMac's 4480 x 2520 (see ScreenshotState).
+      -->
+      <div class="platform-scroller" tabindex="0" aria-label="各プラットフォームのStops">
+
+        <figure class="platform">
+          <div class="platform-visual">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/map.jpg" alt="iPhoneのStopsの地図。パリ周辺の保存済みスポット" loading="lazy" width="640" height="1391">
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>iPhone</strong> <span>現在地を保存し、近くの場所を確認し、その日を振り返る。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="platform">
+          <div class="platform-visual">
+            <div class="device duo-closed">
+              <div class="screen">
+                <img class="shot" src="../images/screens/duo-closed.jpg" alt="閉じたiPhone Duoの外側画面に表示されたStopsの地図" loading="lazy" width="800" height="1164">
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>iPhone Duo</strong> <span>発売初日からiPhone Duoに対応。<a href="#duo">閉じても開いても</a>。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="platform">
+          <div class="platform-visual">
+            <div class="device ipad">
+              <div class="screen">
+                <img class="shot" src="../images/screens/ipad.jpg" alt="iPadのStops：大きなパリの地図の横にスポットのパネル" loading="lazy" width="1600" height="1199">
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>iPad</strong> <span>スポットとタイムラインを、大きく動く地図の横のパネルに。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="platform">
+          <div class="platform-visual">
+            <div class="device mac">
+              <div class="screen">
+                <img class="shot" src="../images/screens/mac.jpg" alt="iMacのデスクトップ上のウインドウで動くStops：パリの地図の横にスポットのパネル" loading="lazy" width="2240" height="1260">
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>Mac</strong> <span>Appleシリコン搭載のMacで、大きな画面で次の旅を計画。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="platform">
+          <div class="platform-visual">
+            <div class="device watch">
+              <div class="screen">
+                <img class="shot" src="../images/screens/watch.jpg" alt="Apple WatchのPoint Sublimeのスポット。地図、距離、メモ" loading="lazy" width="422" height="514">
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>Apple Watch</strong> <span>いちばん近いスポットを文字盤に表示し、手首から「ここを保存」。</span>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="wrap">
+        <div class="grid">
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg></div>
+            <h3>ウィジェット</h3>
+            <p>ホーム画面とロック画面にいちばん近いスポットを表示。ワンタップで経路が見られ、現在地を保存するボタンもあります。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+            <h3>Siriとショートカット</h3>
+            <p>「Stopsで現在地を保存」や「Stopsでいちばん近いスポットはどこ」と、両手をハンドルに置いたまま話しかけるだけ。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+            <h3>Spotlightとビジュアルインテリジェンス</h3>
+            <p>Spotlightでスポットやリストを検索したり、カメラを場所に向けてそのスポットを呼び出したりできます。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+            <h3>到着リマインダー</h3>
+            <p>保存したスポットの近くに来ると、自分に残したメモといっしょにそっとお知らせ。オンにするかどうかはあなた次第です。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+            <h3>あなたのデータを、あなたの好きなように</h3>
+            <p>すべてのデータやどのリストも、いつでもGPX、KML、CSVで書き出せます。ずっと無料です。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+            <h3>あなたの言語で</h3>
+            <p>英語、ドイツ語、フランス語、スペイン語、イタリア語、ポルトガル語、日本語、韓国語、中国語に対応。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: iPhone Duo -->
+    <section id="duo">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">iPhone Duo</span>
+          <h2>発売初日からiPhone Duoに対応。</h2>
+          <p>Stopsは新しいiPhoneに、閉じても開いても対応しています。</p>
+        </div>
+        <div class="duo-pair" aria-label="開いたiPhone Duo">
+          <div class="device duo-open">
+            <div class="screen">
+              <img class="shot" src="../images/screens/duo-open.jpg" alt="横向きに開いたiPhone DuoのStops：横長のパリの地図の横にスポットのパネル" loading="lazy" width="1400" height="985">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Apple Intelligence -->
+    <section id="intelligence" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Apple Intelligence</span>
+          <h2>賢く、それでいてプライベート。</h2>
+          <p>Apple Intelligence対応デバイスでは、Stopsが旅行の記録を書き、探しているものを理解し、取り込んだ場所を整理します。すべてデバイス上で動作し、サーバーで処理されることはありません。使わなくても、ほかの機能はすべてこれまでどおり使えます。</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+            <h3>自ら物語を語る旅行</h3>
+            <p>帰宅すると、旅行ごとにタイトルと短い紹介文が付きます。あなた自身の訪問、町、天気をもとに書かれ、作り話は一切ありません。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+            <h3>自分の言葉で尋ねる</h3>
+            <p>「イタリアで行ったビーチ」や「東京のあのラーメン屋」と検索すれば、探しているスポットや訪問が見つかります。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h4"/></svg></div>
+            <h3>記事を丸ごと保存</h3>
+            <p>Safariから「プロヴァンスのおすすめ水遊びスポット」の記事を共有すると、記事で紹介された場所がまとめて新しいリストになります。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
+            <h3>すっきり整う読み込み</h3>
+            <p>Google TakeoutやGPXファイルから取り込んだ場所には名前からカテゴリが付き、新しいリストにはぴったりのアイコンと色が付きます。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+            <h3>一日ごとに計画</h3>
+            <p>旅程を、近くのスポットをまとめた日ごとに分け、それぞれをその日に合った順番に並べます。朝はハイキング、締めくくりは夕日の見える展望台。</p>
+          </div>
+          <div class="card">
+            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+            <h3>Siriはあなたの旅行を知っている</h3>
+            <p>「Stopsでリスボンの旅行を開く」「Stopsでローマに最後に行ったのはいつ」「Stopsで今まで何か国に行ったか教えて」</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Stops Pro -->
+    <section id="pro">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Stops Pro</span>
+          <h2>場所の保存は無料。もっと楽しむならPro。</h2>
+          <p>保存、リスト、地図、そしてタイムラインのすべては、ずっと無料です。Stops Proでは、さらに過去を振り返り、先の計画を立てる機能が加わります。</p>
+        </div>
+
+        <div class="plans">
+          <div class="plan">
+            <h3>無料</h3>
+            <ul>
+              <li>スポット、リスト、ピン、カテゴリの保存</li>
+              <li>タイムラインとすべての履歴</li>
+              <li>リストをほかの人と共有</li>
+              <li>目的地までの途中のスポット</li>
+              <li>Appleマップのガイド、Google Takeout、GPXから場所を読み込み</li>
+              <li>すべてをいつでも書き出し</li>
+              <li>ウィジェット、Apple Watch、Siri、共有シート</li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <h3>Stops Pro</h3>
+            <ul>
+              <li>“写真”とGoogle Timelineからの訪問</li>
+              <li>旅行ページ、ストーリー、共有できる地図</li>
+              <li>国ごとのジャーナルとワッペン</li>
+              <li>すべてのスポットの天気予報と、おでかけ先</li>
+              <li>訪問ごとのその時の天気</li>
+              <li>徒歩ルートと日ごとのプランが付いた旅程</li>
+            </ul>
+            <div class="prices">
+              <div class="price"><strong>$0.99</strong><span>1週間、1回の旅行に</span></div>
+              <div class="price"><strong>$19.99</strong><span>1年</span></div>
+              <div class="price"><strong>$49.99</strong><span>1回の購入でずっと、家族と共有</span></div>
+            </div>
+            <p class="price-note">価格は米ドルです。現地の価格はApp Storeでご確認ください。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Privacy -->
+    <section id="privacy" class="privacy-band">
+      <div class="wrap">
+        <div class="shield"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="section-head">
+          <span class="eyebrow">プライバシーを最優先に設計</span>
+          <h2>どこへ行くかは、誰にも関係のないこと。私たちにさえも。</h2>
+          <p>行った場所を知っているAppは、それにふさわしい信頼を得なければなりません。だからStopsにはサーバーもアカウントもありません。スポットや訪問はあなたのデバイスにあり、メモや写真と同じように、あなた自身のiCloudで同期されます。私たちのもとには何も届きません。分析も、広告も、トラッキングもありません。たとえ見たいと思っても、私たちがあなたの地図を見ることはできないのです。</p>
+        </div>
+        <div class="pill-row">
+          <span class="pill">アカウント不要</span>
+          <span class="pill">私たちのサーバーなし</span>
+          <span class="pill">分析なし</span>
+          <span class="pill">広告なし</span>
+          <span class="pill">あなたのiCloudで同期</span>
+          <span class="pill">写真をコピーしない</span>
+        </div>
+        <p style="margin-top: 32px;"><a href="privacy.html">プライバシーポリシーを読む</a></p>
+      </div>
+    </section>
+
+    <!-- MARK: Final CTA -->
+    <section class="final alt">
+      <div class="wrap">
+        <img class="hero-icon icon-light" src="../images/app-icon.png" alt="">
+        <img class="hero-icon icon-dark" src="../images/app-icon-dark.png" alt="">
+        <h2>次のスポットが、あなたを待っている。</h2>
+        <p class="availability">Stopsは12月1日、iPhone、iPad、Mac、Apple Watch向けに登場します。今すぐ予約注文すれば、当日に自動でダウンロードされます。</p>
+        <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="App StoreでStopsを予約注文">
+          <picture>
+            <source srcset="/assets/badges/pre-order-ja-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/badges/pre-order-ja-black.svg" alt="App Storeで予約注文" width="134" height="50">
+          </picture>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Copyright © 2026 <a href="/apps/">Edliss LLC</a>. All rights reserved.</span>
+      <nav aria-label="フッター">
+        <a href="guides/index.html">ガイド</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="support.html">サポート</a>
+      </nav>
+      <!-- l10n:languages -->
+      <details class="lang-menu" translate="no">
+        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>日本語</summary>
+        <ul>
+          <li><a href="/stops/index.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="/stops/de/index.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/stops/fr/index.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/stops/es/index.html" hreflang="es-ES" lang="es-ES">Español (España)</a></li>
+          <li><a href="/stops/es-mx/index.html" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a></li>
+          <li><a href="/stops/it/index.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/stops/pt-br/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+          <li><a href="/stops/ja/index.html" hreflang="ja" lang="ja" aria-current="true">日本語</a></li>
+          <li><a href="/stops/ko/index.html" hreflang="ko" lang="ko">한국어</a></li>
+          <li><a href="/stops/zh-hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          <li><a href="/stops/zh-hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+        </ul>
+      </details>
+      <!-- /l10n:languages -->
+    </div>
+  </footer>
+
+</body>
+</html>

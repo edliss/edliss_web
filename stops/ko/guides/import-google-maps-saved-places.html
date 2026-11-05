@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google 지도에 저장한 장소를 Stops로 가져오는 방법 – Stops</title>
+  <meta name="description" content="Google 지도에 저장하고 별표 표시한 장소를 iPhone의 Stops로 옮기세요. Google Takeout으로 내보낸 다음 몇 번의 탭으로 Saved Places.json을 가져오면 됩니다. 무료.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://edliss.com/stops/ko/guides/import-google-maps-saved-places.html">
+  <meta property="og:title" content="Google 지도에 저장한 장소를 Stops로 가져오는 방법">
+  <meta property="og:description" content="Google 지도에 저장하고 별표 표시한 장소를 iPhone의 Stops로 옮기세요. Google Takeout으로 내보낸 다음 몇 번의 탭으로 Saved Places.json을 가져오면 됩니다. 무료.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/app-icon.png">
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Google 지도에 저장한 장소를 Stops로 가져오는 방법", "description": "Google 지도에 저장하고 별표 표시한 장소를 iPhone의 Stops로 옮기세요. Google Takeout으로 내보낸 다음 몇 번의 탭으로 Saved Places.json을 가져오면 됩니다. 무료.", "step": [{"@type": "HowToStep", "position": 1, "name": "Google Takeout에 장소 요청하기", "text": "takeout.google.com에 접속해 로그인하세요. 모두 선택 해제를 선택한 다음 지도(내 장소)만 체크하세요. 형식은 JSON 그대로 두세요.별도로 있는 지도나 저장됨 항목은 선택하지 마세요. 다른 데이터가 들어 있고, 저장됨 목록에는 위치 정보가 없습니다."}, {"@type": "HowToStep", "position": 2, "name": "내보내기 만들기", "text": "다음 단계를 선택하고 1회 내보내기를 그대로 둔 다음 내보내기 생성을 선택하세요. 보통 몇 분 안에 Google에서 다운로드 링크를 이메일로 보내 줍니다."}, {"@type": "HowToStep", "position": 3, "name": "iPhone에 파일 저장하기", "text": "Google 이메일에서 zip 파일을 다운로드하고 파일 앱에서 열어 압축을 푸세요. Takeout › 지도(내 장소) 안에 Saved Places.json이 있습니다. 파일 이름은 Google 언어 설정을 따르므로 Gespeicherte Orte.json처럼 다른 이름일 수 있습니다.Google 지도에서 라벨을 사용한다면 Labeled places.json도 있을 수 있습니다. Stops는 이 파일도 읽습니다."}, {"@type": "HowToStep", "position": 4, "name": "Stops에서 가져오기 열기", "text": "탭 막대 끝에 있는 책 버튼으로 저널을 열고 설정 톱니바퀴를 탭하세요. 가져오기를 선택한 다음 Google Takeout을 선택하고 Saved Places.json을 고르세요.", "image": "https://edliss.com/stops/images/guides/import-menu.jpg"}, {"@type": "HowToStep", "position": 5, "name": "장소를 확인하고 가져오기", "text": "Stops는 저장하기 전에 찾은 모든 장소를 보여 줍니다. 원하지 않는 장소는 체크를 해제하세요. 이미 있는 장소는 이미 저장됨으로 표시되어 제외됩니다.추가할 위치에서 새로운 목록을 그대로 두면 별도의 목록에 담기고, 기존 목록 중 하나를 고를 수도 있습니다. 그런 다음 가져오기를 탭하세요.", "image": "https://edliss.com/stops/images/guides/import-takeout.jpg"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Stops", "item": "https://edliss.com/stops/ko/index.html"}, {"@type": "ListItem", "position": 2, "name": "가이드", "item": "https://edliss.com/stops/ko/guides/index.html"}, {"@type": "ListItem", "position": 3, "name": "Google 지도 저장한 장소", "item": "https://edliss.com/stops/ko/guides/import-google-maps-saved-places.html"}]}</script>
+  <!-- l10n:alternates -->
+  <link rel="alternate" hreflang="en" href="https://edliss.com/stops/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="de" href="https://edliss.com/stops/de/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="fr" href="https://edliss.com/stops/fr/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="es-ES" href="https://edliss.com/stops/es/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="es-419" href="https://edliss.com/stops/es-mx/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="it" href="https://edliss.com/stops/it/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://edliss.com/stops/pt-br/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="ja" href="https://edliss.com/stops/ja/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="ko" href="https://edliss.com/stops/ko/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://edliss.com/stops/zh-hans/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://edliss.com/stops/zh-hant/guides/import-google-maps-saved-places.html">
+  <link rel="alternate" hreflang="x-default" href="https://edliss.com/stops/guides/import-google-maps-saved-places.html">
+  <!-- /l10n:alternates -->
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <img class="icon-light" src="../../images/app-icon.png" alt="">
+        <img class="icon-dark" src="../../images/app-icon-dark.png" alt="">
+        Stops
+      </a>
+      <nav class="nav-links" aria-label="메인">
+        <a class="optional" href="../index.html#features">기능</a>
+        <a aria-current="page" href="../guides/index.html">가이드</a>
+        <a href="../privacy.html">개인정보 보호</a>
+        <a href="../support.html">지원</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <p class="breadcrumb"><a href="index.html">가이드</a></p>
+    <h1>Google 지도에 저장한 장소를 Stops로 가져오는 방법</h1>
+    <p class="lede">Google 지도에는 저장한 장소를 내보내는 버튼이 없지만, Google Takeout을 이용하면 파일로 사본을 받을 수 있습니다. Stops는 그 파일을 읽어 각 장소의 이름, 주소, 메모, 저장한 날짜를 보관합니다.</p>
+    <ul class="guide-facts"><li>무료</li><li>약 10분</li><li>iPhone 및 iPad</li></ul>
+
+    <h2>준비물</h2>
+    <ul><li>Google 지도에서 사용하는 Google 계정.</li><li>iPhone 또는 iPad의 Stops.</li></ul>
+
+    <h2>단계별 안내</h2>
+    <ol class="steps">
+      <li class="step">
+        <!-- Screenshot wanted: images/guides/takeout-select.jpg: Google Takeout with only Maps (your places) ticked -->
+        <div class="step-copy">
+          <h3>Google Takeout에 장소 요청하기</h3>
+          <p><a href="https://takeout.google.com">takeout.google.com</a>에 접속해 로그인하세요. <strong>모두 선택 해제</strong>를 선택한 다음 <strong>지도(내 장소)</strong>만 체크하세요. 형식은 JSON 그대로 두세요.</p><p>별도로 있는 <strong>지도</strong>나 <strong>저장됨</strong> 항목은 선택하지 마세요. 다른 데이터가 들어 있고, 저장됨 목록에는 위치 정보가 없습니다.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>내보내기 만들기</h3>
+          <p><strong>다음 단계</strong>를 선택하고 <strong>1회 내보내기</strong>를 그대로 둔 다음 <strong>내보내기 생성</strong>을 선택하세요. 보통 몇 분 안에 Google에서 다운로드 링크를 이메일로 보내 줍니다.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>iPhone에 파일 저장하기</h3>
+          <p>Google 이메일에서 zip 파일을 다운로드하고 파일 앱에서 열어 압축을 푸세요. <strong>Takeout › 지도(내 장소)</strong> 안에 <strong>Saved Places.json</strong>이 있습니다. 파일 이름은 Google 언어 설정을 따르므로 Gespeicherte Orte.json처럼 다른 이름일 수 있습니다.</p><p>Google 지도에서 라벨을 사용한다면 <strong>Labeled places.json</strong>도 있을 수 있습니다. Stops는 이 파일도 읽습니다.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>Stops에서 가져오기 열기</h3>
+          <p>탭 막대 끝에 있는 책 버튼으로 <strong>저널</strong>을 열고 <strong>설정</strong> 톱니바퀴를 탭하세요. <strong>가져오기</strong>를 선택한 다음 <strong>Google Takeout</strong>을 선택하고 Saved Places.json을 고르세요.</p>
+        </div>
+          <div class="phone" role="img" aria-label="Stops의 가져오기 화면: GPX 파일, Google Takeout, Apple 지도 가이드, 사진과 Google Timeline에서 가져온 방문">
+            <div class="screen">
+              <img class="shot" src="../../images/guides/import-menu.jpg" alt="" width="640" height="1391" loading="lazy">
+            </div>
+          </div>
+      </li>
+      <li class="step">
+        <div class="step-copy">
+          <h3>장소를 확인하고 가져오기</h3>
+          <p>Stops는 저장하기 전에 찾은 모든 장소를 보여 줍니다. 원하지 않는 장소는 체크를 해제하세요. 이미 있는 장소는 <strong>이미 저장됨</strong>으로 표시되어 제외됩니다.</p><p><strong>추가할 위치</strong>에서 <strong>새로운 목록</strong>을 그대로 두면 별도의 목록에 담기고, 기존 목록 중 하나를 고를 수도 있습니다. 그런 다음 <strong>가져오기</strong>를 탭하세요.</p>
+        </div>
+          <div class="phone" role="img" aria-label="Saved Places.json에서 가져온 리스본 장소 10곳(그중 2곳은 이미 저장됨)이 표시된 Stops의 가져오기 검토 화면">
+            <div class="screen">
+              <img class="shot" src="../../images/guides/import-takeout.jpg" alt="" width="640" height="1391" loading="lazy">
+            </div>
+          </div>
+      </li>
+    </ol>
+
+    <h2>알아 두면 좋은 점</h2>
+    <ul><li>최근 Takeout 파일에는 장소의 위치가 빠져 있는 경우가 많습니다. 이럴 때는 Stops가 이름과 주소로 Apple 지도에서 장소를 찾는데, 파일이 길면 시간이 조금 걸립니다.</li><li>Stops는 알아볼 수 있는 장소마다 카테고리를 지정하므로, 베이커리는 음식으로, 해변은 해변으로 들어옵니다.</li><li>가져오기는 무료이며, Apple 지도 검색 외에는 어떤 데이터도 기기 밖으로 나가지 않습니다.</li></ul>
+
+    <h2>더 많은 가이드</h2>
+    <div class="guide-list"><a href="import-apple-maps-guide.html"><strong>Apple 지도 가이드</strong><span>Apple 지도에서 만든 가이드를 경유지 목록으로 바꿔 보세요.</span></a><a href="import-gpx-file.html"><strong>GPX 파일</strong><span>하이킹, 자전거, GPS 앱의 웨이포인트를 경유지로 가져오세요.</span></a><a href="import-google-timeline.html"><strong>Google 지도 Timeline</strong><span>Google 지도 Timeline 내보내기로 수년간의 과거 방문을 채우세요.</span></a></div>
+
+    <div class="contact-card">
+      <h2>Stops 받기</h2>
+      <p>들러 볼 만한 모든 장소를 iPhone, iPad, Mac, Apple Watch에서.</p>
+      <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="App Store에서 Stops 사전 주문하기">
+        <picture>
+          <source srcset="/assets/badges/pre-order-ko-white.svg" media="(prefers-color-scheme: dark)">
+          <img src="/assets/badges/pre-order-ko-black.svg" alt="App Store에서 사전 주문하기" width="159" height="50">
+        </picture>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Copyright © 2026 <a href="/apps/">Edliss LLC</a>. All rights reserved.</span>
+      <nav aria-label="푸터">
+        <a href="../index.html">홈</a>
+        <a href="../guides/index.html">가이드</a>
+        <a href="../privacy.html">개인정보 보호</a>
+        <a href="../support.html">지원</a>
+      </nav>
+      <!-- l10n:languages -->
+      <details class="lang-menu" translate="no">
+        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>한국어</summary>
+        <ul>
+          <li><a href="/stops/guides/import-google-maps-saved-places.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="/stops/de/guides/import-google-maps-saved-places.html" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/stops/fr/guides/import-google-maps-saved-places.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/stops/es/guides/import-google-maps-saved-places.html" hreflang="es-ES" lang="es-ES">Español (España)</a></li>
+          <li><a href="/stops/es-mx/guides/import-google-maps-saved-places.html" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a></li>
+          <li><a href="/stops/it/guides/import-google-maps-saved-places.html" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/stops/pt-br/guides/import-google-maps-saved-places.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+          <li><a href="/stops/ja/guides/import-google-maps-saved-places.html" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/stops/ko/guides/import-google-maps-saved-places.html" hreflang="ko" lang="ko" aria-current="true">한국어</a></li>
+          <li><a href="/stops/zh-hans/guides/import-google-maps-saved-places.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          <li><a href="/stops/zh-hant/guides/import-google-maps-saved-places.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+        </ul>
+      </details>
+      <!-- /l10n:languages -->
+    </div>
+  </footer>
+
+</body>
+</html>
