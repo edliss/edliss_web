@@ -243,11 +243,13 @@ p a {
     text-decoration: underline
 }
 
+/* Icons are PNGs with their own rounded corners, so nothing is clipped here; a drop
+   shadow (not box-shadow) follows each icon's real outline. */
 .app-card-icon {
     display: block;
     width: 112px;
     height: 112px;
-    border-radius: 24px
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.14)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.08))
 }
 
 .app-card-copy {
@@ -389,8 +391,7 @@ p a {
 
     .app-card-icon {
         width: 88px;
-        height: 88px;
-        border-radius: 20px
+        height: 88px
     }
 
     .app-card-name {
