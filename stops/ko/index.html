@@ -40,6 +40,14 @@
         <a class="optional" href="#privacy">개인정보 보호</a>
         <a href="support.html">지원</a>
       </nav>
+      <div class="nav-badge">
+        <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="App Store에서 Stops 사전 주문하기">
+          <picture>
+            <source srcset="/assets/badges/pre-order-ko-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/badges/pre-order-ko-black.svg" alt="App Store에서 사전 주문하기" width="159" height="50">
+          </picture>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -415,45 +423,52 @@
         </figure>
 
       </div>
+    </section>
 
-      <div class="wrap">
-        <div class="grid">
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg></div>
-            <h3>위젯</h3>
-            <p>홈 화면과 잠금 화면에 가장 가까운 경유지를 표시하고, 탭 한 번으로 경로를 받아 보세요. 현재 위치를 저장하는 버튼도 있습니다.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
-            <h3>Siri 및 단축어</h3>
-            <p>“Stops에 현재 위치 저장해 줘” 또는 “Stops에서 가장 가까운 경유지가 어디야?”라고 말해 보세요. 두 손은 핸들 위에 둔 채로요.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
-            <h3>Spotlight 및 시각 지능</h3>
-            <p>Spotlight에서 경유지나 목록을 찾거나, 카메라로 장소를 비추면 해당 경유지를 불러옵니다.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
-            <h3>도착 알림</h3>
-            <p>저장해 둔 경유지 근처에 오면 남겨 둔 메모와 함께 살며시 알려 드립니다. 원할 때만 켜세요.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
-            <h3>내 데이터는 내 방식대로</h3>
-            <p>언제든 전체 데이터 또는 원하는 목록을 GPX, KML, CSV로 내보내세요. 언제나 무료입니다.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
-            <h3>여러분의 언어로</h3>
-            <p>영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 일본어, 한국어, 중국어.</p>
-          </div>
+    <!-- MARK: More ways -->
+    <section id="more">
+      <div class="card-scroller" tabindex="0" aria-label="Stops를 사용하는 더 많은 방법">
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg></div>
+          <h3>위젯</h3>
+          <p>홈 화면과 잠금 화면에 가장 가까운 경유지를 표시하고, 탭 한 번으로 경로를 받아 보세요. 현재 위치를 저장하는 버튼도 있습니다.</p>
+          <div class="card-art rising"><img src="../images/cards/widgets.png" alt="지금 있는 퐁뇌프를 저장하도록 제안하는 Stops 위젯이 있는 홈 화면" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+          <h3>Siri 및 단축어</h3>
+          <p>“Stops에 현재 위치 저장해 줘” 또는 “Stops에서 가장 가까운 경유지가 어디야?”라고 말해 보세요. 두 손은 핸들 위에 둔 채로요.</p>
+          <div class="card-art rising"><img src="../images/cards/siri.png" alt="Stops 단축어를 켜도록 제안하는 Siri: “Save a stop in Stops”, “Note a stop in Stops”, “Nearest stop in Stops”" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+          <h3>도착 알림</h3>
+          <p>저장해 둔 경유지 근처에 오면 남겨 둔 메모와 함께 살며시 알려 드립니다. 원할 때만 켜세요.</p>
+          <div class="card-art rising"><img src="../images/cards/reminders.png" alt="Stops 지도 위의 알림: Café Charlot이 근처에 있으며, 남겨 둔 메모도 함께 표시" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+          <h3>내 데이터는 내 방식대로</h3>
+          <p>언제든 전체 데이터 또는 원하는 목록을 GPX, KML, CSV로 내보내세요. 언제나 무료입니다.</p>
+          <div class="card-art files"><img src="../images/cards/export.png" alt="GPX, KML 및 CSV 파일" loading="lazy" width="720" height="440"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+          <h3>Spotlight 및 시각 지능</h3>
+          <p>Spotlight에서 경유지나 목록을 찾거나, 카메라로 장소를 비추면 해당 경유지를 불러옵니다.</p>
+          <div class="card-art rising"><img src="../images/cards/spotlight.png" alt="iPhone의 Spotlight에서 Café Charlot이 최상위 결과로 나타난 모습" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+          <h3>여러분의 언어로</h3>
+          <p>영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 일본어, 한국어, 중국어.</p>
+          <div class="card-art fan"><img src="../images/cards/languages.png" alt="iPhone 세 대의 Stops: 일본어 사진에서 가져오기, 독일어 내보내기, 프랑스어 Stops Pro" loading="lazy" width="1000" height="641"></div>
         </div>
       </div>
     </section>
 
     <!-- MARK: iPhone Duo -->
-    <section id="duo">
+    <section id="duo" class="alt">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">iPhone Duo</span>
@@ -471,7 +486,7 @@
     </section>
 
     <!-- MARK: Apple Intelligence -->
-    <section id="intelligence" class="alt">
+    <section id="intelligence">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Apple Intelligence</span>
@@ -479,43 +494,54 @@
           <p>Apple Intelligence를 지원하는 기기에서는 Stops가 여행 이야기를 써 주고, 찾고 있는 것을 이해하며, 가져온 장소를 깔끔하게 정리해 줍니다. 모든 처리는 서버가 아닌 기기에서 이루어지며, Apple Intelligence가 없어도 나머지 기능은 똑같이 작동합니다.</p>
         </div>
 
-        <div class="grid">
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-            <h3>스스로 이야기를 들려주는 여행</h3>
-            <p>집에 돌아오면 각 여행에 제목과 두어 줄의 소개가 붙습니다. 여러분의 방문, 도시, 날씨를 바탕으로 쓰이며, 지어낸 내용은 없습니다.</p>
+        <div class="ai-showcase">
+          <div class="ai-side left">
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+              <h3>스스로 이야기를 들려주는 여행</h3>
+              <p>집에 돌아오면 각 여행에 제목과 두어 줄의 소개가 붙습니다. 여러분의 방문, 도시, 날씨를 바탕으로 쓰이며, 지어낸 내용은 없습니다.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+              <h3>평소 말투로 물어보세요</h3>
+              <p>“이탈리아에서 갔던 해변”이나 “도쿄의 그 라멘집”을 검색하면 원하는 경유지와 방문을 찾아 줍니다.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h4"/></svg></div>
+              <h3>기사 하나를 통째로 저장</h3>
+              <p>Safari에서 “프로방스 최고의 수영 명소” 같은 기사를 공유하면, 기사에 나온 장소들이 새로운 목록으로 한꺼번에 들어옵니다.</p>
+            </div>
           </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
-            <h3>평소 말투로 물어보세요</h3>
-            <p>“이탈리아에서 갔던 해변”이나 “도쿄의 그 라멘집”을 검색하면 원하는 경유지와 방문을 찾아 줍니다.</p>
+          <div class="ai-glow">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/trip-story.jpg" alt="런던 3일 여행 페이지. 여행 중 방문한 곳을 바탕으로 Apple Intelligence가 쓴 이야기가 함께 표시됨" loading="lazy" width="639" height="1391">
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h4"/></svg></div>
-            <h3>기사 하나를 통째로 저장</h3>
-            <p>Safari에서 “프로방스 최고의 수영 명소” 같은 기사를 공유하면, 기사에 나온 장소들이 새로운 목록으로 한꺼번에 들어옵니다.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
-            <h3>더 깔끔한 가져오기</h3>
-            <p>Google Takeout이나 GPX 파일에서 가져온 장소는 이름을 바탕으로 카테고리가 지정되고, 새로운 목록에는 어울리는 아이콘과 색상이 붙습니다.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
-            <h3>하루 단위로 계획하기</h3>
-            <p>여행 일정을 가까운 경유지끼리 묶어 여러 날로 나누고, 하루에 맞는 순서로 정리합니다. 하이킹은 아침에, 일몰 전망대는 마지막에.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
-            <h3>내 여행을 아는 Siri</h3>
-            <p>“Stops에서 내 리스본 여행 열기”, “Stops에서 로마에 마지막으로 간 게 언제야?” 또는 “Stops에서 내가 가 본 나라가 몇 개야?”</p>
+          <div class="ai-side right">
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
+              <h3>더 깔끔한 가져오기</h3>
+              <p>Google Takeout이나 GPX 파일에서 가져온 장소는 이름을 바탕으로 카테고리가 지정되고, 새로운 목록에는 어울리는 아이콘과 색상이 붙습니다.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+              <h3>하루 단위로 계획하기</h3>
+              <p>여행 일정을 가까운 경유지끼리 묶어 여러 날로 나누고, 하루에 맞는 순서로 정리합니다. 하이킹은 아침에, 일몰 전망대는 마지막에.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+              <h3>내 여행을 아는 Siri</h3>
+              <p>“Stops에서 내 리스본 여행 열기”, “Stops에서 로마에 마지막으로 간 게 언제야?” 또는 “Stops에서 내가 가 본 나라가 몇 개야?”</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- MARK: Stops Pro -->
-    <section id="pro">
+    <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Stops Pro</span>
@@ -523,8 +549,8 @@
           <p>저장, 목록, 지도, 그리고 타임라인 전체는 앞으로도 계속 무료입니다. Stops Pro는 더 먼 과거를 돌아보고 앞으로를 계획하는 기능을 더해 줍니다.</p>
         </div>
 
-        <div class="plans">
-          <div class="plan">
+        <div class="compare">
+          <div class="compare-col">
             <h3>무료</h3>
             <ul>
               <li>경유지, 목록, 핀, 카테고리 저장</li>
@@ -536,7 +562,7 @@
               <li>위젯, Apple Watch, Siri 및 공유 시트</li>
             </ul>
           </div>
-          <div class="plan pro">
+          <div class="compare-col pro">
             <h3>Stops Pro</h3>
             <ul>
               <li>사진과 Google Timeline에서 가져온 방문</li>
@@ -553,6 +579,15 @@
             </div>
             <p class="price-note">가격은 미국 달러 기준입니다. 현지 가격은 App Store에서 확인하세요.</p>
           </div>
+        </div>
+
+        <div class="plan-cta">
+          <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="App Store에서 Stops 사전 주문하기">
+            <picture>
+              <source srcset="/assets/badges/pre-order-ko-white.svg" media="(prefers-color-scheme: dark)">
+              <img src="/assets/badges/pre-order-ko-black.svg" alt="App Store에서 사전 주문하기" width="159" height="50">
+            </picture>
+          </a>
         </div>
       </div>
     </section>

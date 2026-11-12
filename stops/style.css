@@ -155,9 +155,106 @@ img {
   text-decoration: none;
 }
 
+/* The App Store badge in the bar, home page only. It stays out of the way
+   while the hero's own badge is on screen, then slides in beside the links
+   once the hero has scrolled away. Pure CSS: a view timeline on the hero
+   drives it, scoped to the body so the header can see it. Browsers without
+   scroll-driven animations keep the bar as it was. */
+.nav-badge {
+  display: none;
+}
+
+@supports (animation-timeline: view()) and (timeline-scope: --hero) {
+  body {
+    timeline-scope: --hero;
+  }
+
+  .hero {
+    view-timeline: --hero block;
+  }
+
+  .nav .wrap:has(.nav-badge) .nav-links {
+    margin-left: auto;
+  }
+
+  .nav-badge {
+    display: flex;
+    overflow: hidden;
+    animation: nav-badge-in linear both;
+    animation-timeline: --hero;
+    animation-range: exit 70% exit 100%;
+  }
+}
+
+@keyframes nav-badge-in {
+  from {
+    max-width: 0;
+    margin-left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    max-width: 120px;
+    margin-left: 18px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav-badge .appstore-badge img {
+  height: 34px;
+}
+
+/* On phones the bar is tight: a smaller badge, and the links close up a
+   little while it shows. */
+@media (max-width: 640px) {
+  .nav-badge .appstore-badge img {
+    height: 30px;
+  }
+
+  .nav .wrap:has(.nav-badge) .nav-links {
+    gap: 18px;
+  }
+}
+
+/* On the narrowest phones the name beside the icon gives way to the badge,
+   so longer link names (German, French) still fit on one line. */
+@supports (animation-timeline: view()) and (timeline-scope: --hero) {
+  @media (max-width: 430px) {
+    .nav .wrap:has(.nav-badge) .brand {
+      animation: brand-name-out linear both;
+      animation-timeline: --hero;
+      animation-range: exit 70% exit 100%;
+    }
+  }
+}
+
+@keyframes brand-name-out {
+  to {
+    font-size: 0;
+    gap: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .nav-links .optional {
     display: none;
+  }
+
+  /* Safari 26 only carries a sticky header's colour up under the status bar
+     when the header is opaque, so phones get a solid bar the colour the glass
+     shows over the page background. */
+  .nav {
+    background: #fcfcfd;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (max-width: 640px) and (prefers-color-scheme: dark) {
+  .nav {
+    background: #1d1d20;
   }
 }
 
@@ -208,11 +305,10 @@ img {
   margin: 22px auto 0;
 }
 
+/* The shield flows inline with the text, so on a wrapped line it sits right
+   before the first word instead of floating beside the whole paragraph. */
 .hero .trust {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  max-width: 640px;
   margin: 14px auto 34px;
   font-size: 15px;
   font-weight: 600;
@@ -221,8 +317,11 @@ img {
 
 .hero .trust-shield {
   flex: none;
+  display: inline-block;
   width: 20px;
   height: 20px;
+  margin-right: 6px;
+  vertical-align: -4px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -605,6 +704,162 @@ section {
   outline-offset: -2px;
 }
 
+/* Previous / next buttons like Apple's product pages, in pure CSS with
+   ::scroll-button(). Only Chromium draws them so far; Safari and Firefox skip
+   the whole block and keep the plain swipeable scroller. The buttons sit
+   under each scroller, right-aligned with the content column, and grey out at
+   either end. Their spoken labels follow the page language. */
+@supports selector(::scroll-button(*)) {
+  #everywhere,
+  #more {
+    position: relative;
+  }
+
+  .platform-scroller {
+    anchor-name: --platforms;
+    margin-bottom: 100px;
+  }
+
+  .card-scroller {
+    anchor-name: --cards;
+    margin-bottom: 64px;
+  }
+
+
+  :is(.platform-scroller, .card-scroller)::scroll-button(*) {
+    position: absolute;
+    position-anchor: --platforms;
+    top: calc(anchor(bottom) - 20px);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: center / 20px 20px no-repeat rgba(210, 210, 215, 0.64);
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+  }
+
+  .card-scroller::scroll-button(*) {
+    position-anchor: --cards;
+  }
+
+  :is(.platform-scroller, .card-scroller)::scroll-button(*):hover:not(:disabled) {
+    background-color: rgba(210, 210, 215, 0.9);
+  }
+
+  :is(.platform-scroller, .card-scroller)::scroll-button(*):focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  :is(.platform-scroller, .card-scroller)::scroll-button(*):disabled {
+    opacity: 0.42;
+    cursor: default;
+  }
+
+  :is(.platform-scroller, .card-scroller)::scroll-button(inline-start) {
+    content: "" / "Previous";
+    right: calc(max(24px, (100% - var(--max)) / 2 + 24px) + 58px);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 5l-7 7 7 7'/%3E%3C/svg%3E");
+  }
+
+  :is(.platform-scroller, .card-scroller)::scroll-button(inline-end) {
+    content: "" / "Next";
+    right: max(24px, calc((100% - var(--max)) / 2 + 24px));
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(de)::scroll-button(inline-start) {
+    content: "" / "Zurück";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(de)::scroll-button(inline-end) {
+    content: "" / "Weiter";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(fr)::scroll-button(inline-start) {
+    content: "" / "Précédent";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(fr)::scroll-button(inline-end) {
+    content: "" / "Suivant";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(es)::scroll-button(inline-start) {
+    content: "" / "Anterior";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(es)::scroll-button(inline-end) {
+    content: "" / "Siguiente";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(it)::scroll-button(inline-start) {
+    content: "" / "Precedente";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(it)::scroll-button(inline-end) {
+    content: "" / "Successivo";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(pt)::scroll-button(inline-start) {
+    content: "" / "Anterior";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(pt)::scroll-button(inline-end) {
+    content: "" / "Próximo";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(ja)::scroll-button(inline-start) {
+    content: "" / "前へ";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(ja)::scroll-button(inline-end) {
+    content: "" / "次へ";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(ko)::scroll-button(inline-start) {
+    content: "" / "이전";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(ko)::scroll-button(inline-end) {
+    content: "" / "다음";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(zh-Hans)::scroll-button(inline-start) {
+    content: "" / "上一个";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(zh-Hans)::scroll-button(inline-end) {
+    content: "" / "下一个";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(zh-Hant)::scroll-button(inline-start) {
+    content: "" / "上一個";
+  }
+
+  :is(.platform-scroller, .card-scroller):lang(zh-Hant)::scroll-button(inline-end) {
+    content: "" / "下一個";
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :is(.platform-scroller, .card-scroller)::scroll-button(*) {
+      background-color: rgba(66, 66, 69, 0.72);
+    }
+
+    :is(.platform-scroller, .card-scroller)::scroll-button(*):hover:not(:disabled) {
+      background-color: rgba(86, 86, 90, 0.9);
+    }
+
+    :is(.platform-scroller, .card-scroller)::scroll-button(inline-start) {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f7' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 5l-7 7 7 7'/%3E%3C/svg%3E");
+    }
+
+    :is(.platform-scroller, .card-scroller)::scroll-button(inline-end) {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f7' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
+    }
+  }
+}
+
 .platform {
   flex: none;
   scroll-snap-align: start;
@@ -806,8 +1061,13 @@ section {
 }
 
 @media (max-width: 900px) {
+  /* Just taller than the iPhone (200 pt wide), the tallest device here. */
   .platform-visual {
-    height: 460px;
+    height: 412px;
+  }
+
+  .platform-scroller {
+    padding-top: 0;
   }
 
   .platform .phone {
@@ -827,62 +1087,75 @@ section {
   }
 }
 
+/* On phones, narrower cards and gaps so the next device clearly peeks in. */
+@media (max-width: 640px) {
+  .platform-scroller {
+    gap: 20px;
+  }
+
+  .platform figcaption {
+    max-width: 72vw;
+  }
+
+  .device.ipad,
+  .device.mac {
+    width: 72vw;
+  }
+}
+
 /* MARK: - Plans */
 
-.plans {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: stretch;
+/* The whole Pro section is a band of colour, from the app's pink into the
+   purple of the Apple Intelligence glow. */
+.pro-band {
+  position: relative;
+  color: #fff;
+  background:
+    radial-gradient(80% 60% at 85% 0%, rgba(255, 255, 255, 0.18), transparent 60%),
+    radial-gradient(70% 70% at 0% 100%, rgba(110, 63, 240, 0.45), transparent 60%),
+    linear-gradient(150deg, #ff375f 0%, #e3245f 35%, #a62cc9 75%, #6e3ff0 100%);
 }
 
-.plan {
-  padding: 32px;
-  border-radius: var(--radius);
-  background: var(--bg);
-  border: 1px solid var(--hairline);
+.pro-band .section-head p {
+  color: rgba(255, 255, 255, 0.86);
 }
 
-.plan.pro {
-  border-color: var(--accent);
+.pro-band .eyebrow {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.plan h3 {
-  font-size: 26px;
-  margin-bottom: 18px;
+@media (prefers-color-scheme: dark) {
+  .pro-band {
+    background:
+      radial-gradient(80% 60% at 85% 0%, rgba(255, 255, 255, 0.1), transparent 60%),
+      radial-gradient(70% 70% at 0% 100%, rgba(80, 40, 200, 0.5), transparent 60%),
+      linear-gradient(150deg, #c81e4a 0%, #a81d55 35%, #7a2398 75%, #4c2db8 100%);
+  }
 }
 
-.plan.pro h3 {
-  color: var(--accent);
-}
-
-.plan ul {
+/* Tick lists and price tiles. */
+.pro-band ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.plan li {
+.pro-band li {
   position: relative;
-  padding-left: 28px;
+  padding-left: 30px;
   margin-bottom: 12px;
-  color: var(--text-secondary);
 }
 
-.plan li::before {
+.pro-band li::before {
   content: "";
   position: absolute;
-  left: 2px;
-  top: 7px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
-}
-
-.plan.pro li {
-  color: var(--text);
+  left: 0;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .prices {
@@ -890,14 +1163,19 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--hairline);
+}
+
+.price {
+  padding: 16px 16px 18px;
+  border-radius: 18px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
 }
 
 .price strong {
   display: block;
   font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   letter-spacing: -0.02em;
 }
 
@@ -909,20 +1187,104 @@ section {
 }
 
 .price-note {
-  margin-top: 18px;
+  margin-top: 14px;
   font-size: 13px;
   color: var(--text-secondary);
 }
 
+.plan-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* One card comparing the two: Free on the left, Pro on the right on a soft
+   tint, a hairline between them, and the prices only under Pro. The App
+   Store badge sits under the card, for both. */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: 0 40px 80px -30px rgba(40, 0, 60, 0.55);
+}
+
+.compare-col {
+  padding: 40px;
+}
+
+.compare-col h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.compare-col li {
+  color: var(--text-secondary);
+}
+
+.compare-col:not(.pro) li::before {
+  opacity: 0.6;
+}
+
+.compare-col.pro {
+  background: var(--accent-soft);
+  border-left: 1px solid var(--hairline);
+}
+
+.compare-col.pro h3 {
+  color: var(--accent);
+}
+
+.compare-col.pro li {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.compare-col.pro li::before {
+  color: var(--accent);
+}
+
+.compare .price {
+  background: var(--bg-elevated);
+}
+
 @media (max-width: 860px) {
-  .plans {
+  .compare {
     grid-template-columns: 1fr;
+  }
+
+  .compare-col.pro {
+    border-left: none;
+    border-top: 1px solid var(--hairline);
   }
 }
 
 @media (max-width: 520px) {
+  .compare-col {
+    padding: 30px 24px;
+  }
+
   .prices {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .price {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 14px 18px;
+  }
+
+  .price strong {
+    flex: none;
+    font-size: 24px;
+  }
+
+  .price span {
+    margin-top: 0;
   }
 }
 
@@ -941,7 +1303,7 @@ section {
 .card {
   padding: 28px;
   border-radius: var(--radius);
-  background: var(--bg);
+  background: var(--bg-elevated);
   border: 1px solid var(--hairline);
 }
 
@@ -984,6 +1346,310 @@ section {
 .card p {
   color: var(--text-secondary);
   font-size: 16px;
+}
+
+/* Cards with a picture, like the ones on Apple's product pages: white cards
+   on the grey page, scrolling sideways and snapping like the platform
+   scroller, the words at the top and real Stops UI at the bottom, phones
+   rising from the card's bottom edge and cut off by it. */
+/* The cards carry on from Everywhere without a heading of their own, so
+   their band is shorter than a full section. */
+#more {
+  padding: 72px 0;
+}
+
+.card-scroller {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 max(24px, calc((100% - var(--max)) / 2 + 24px)) 24px;
+  scroll-padding-inline: max(24px, calc((100% - var(--max)) / 2 + 24px));
+}
+
+.card-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.card-scroller:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.card-scroller .card {
+  flex: none;
+  width: 360px;
+  min-height: 520px;
+  scroll-snap-align: start;
+  border-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .card-scroller .card {
+    width: 80vw;
+  }
+}
+
+.card.has-art {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+/* On the picture cards the icon stands alone in the accent colour, without
+   its tinted tile, like the small glyphs on Apple's cards. */
+.card.has-art .glyph {
+  width: auto;
+  height: auto;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-bottom: 14px;
+}
+
+.card.has-art .glyph svg {
+  width: 30px;
+  height: 30px;
+}
+
+.card-art {
+  margin: auto -28px 0;
+  padding-top: 28px;
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-art img {
+  display: block;
+  height: auto;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.18));
+}
+
+.card-art.rising img {
+  width: 84%;
+}
+
+/* The three phones stand on the card's bottom edge, the side ones cut off
+   by the card's sides. */
+.card-art.fan {
+  align-items: flex-end;
+}
+
+.card-art.fan img {
+  width: 118%;
+  max-width: none;
+  flex: none;
+}
+
+/* Floating objects sit in the middle of the picture area. */
+.card-art.files {
+  align-items: center;
+  padding-top: 8px;
+}
+
+.card-art.files img {
+  width: 86%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-art img {
+    filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.6));
+  }
+}
+
+/* MARK: - Apple Intelligence */
+
+/* One big picture of what it writes, a trip page with its story, in a soft
+   glow of the colours iOS uses while Apple Intelligence works. The features
+   float around it as small glass cards, three down each side, staggered and
+   drifting gently. Narrow screens stack them under the phone instead. */
+.ai-showcase {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.ai-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.ai-glow::before {
+  content: "";
+  position: absolute;
+  inset: 4% -10%;
+  z-index: -1;
+  border-radius: 40%;
+  background: conic-gradient(from 210deg, #ff9f0a, #ff375f, #bf5af2, #5e5ce6, #40c8e0, #ff9f0a);
+  filter: blur(56px);
+  opacity: 0.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ai-glow::before {
+    opacity: 0.8;
+  }
+}
+
+.ai-showcase .phone {
+  width: 300px;
+}
+
+.ai-side {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ai-item {
+  max-width: 300px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  background: var(--glass);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.25);
+  animation: ai-float 7s ease-in-out infinite alternate;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ai-item {
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Staggered like scattered notes: the outer cards sit further from the
+   phone, the middle ones tuck in against it, and each drifts on its own beat. */
+.ai-side.left {
+  align-items: flex-end;
+}
+
+.ai-side.left .ai-item:nth-child(1) {
+  margin-right: 36px;
+}
+
+.ai-side.left .ai-item:nth-child(2) {
+  margin-right: -24px;
+  animation-delay: -2.5s;
+}
+
+.ai-side.left .ai-item:nth-child(3) {
+  margin-right: 20px;
+  animation-delay: -5s;
+}
+
+.ai-side.right {
+  align-items: flex-start;
+}
+
+.ai-side.right .ai-item:nth-child(1) {
+  margin-left: 20px;
+  animation-delay: -1.2s;
+}
+
+.ai-side.right .ai-item:nth-child(2) {
+  margin-left: -24px;
+  animation-delay: -3.8s;
+}
+
+.ai-side.right .ai-item:nth-child(3) {
+  margin-left: 36px;
+  animation-delay: -6s;
+}
+
+@keyframes ai-float {
+  from {
+    transform: translateY(-6px);
+  }
+
+  to {
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-item {
+    animation: none;
+  }
+}
+
+.ai-item .glyph {
+  margin-bottom: 10px;
+  color: var(--accent-deep);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ai-item .glyph {
+    color: var(--accent);
+  }
+}
+
+.ai-item .glyph svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ai-item h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.ai-item p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Too narrow to float: the phone first, then the cards in a grid. */
+@media (max-width: 1000px) {
+  .ai-showcase {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ai-glow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-side {
+    gap: 20px;
+  }
+
+  .ai-side.left,
+  .ai-side.right {
+    align-items: stretch;
+  }
+
+  .ai-showcase .ai-side .ai-item:nth-child(n) {
+    max-width: none;
+    margin: 0;
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .ai-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-showcase .phone {
+    width: min(260px, 70vw);
+  }
 }
 
 /* MARK: - Privacy band */

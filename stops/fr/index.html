@@ -40,6 +40,14 @@
         <a class="optional" href="#privacy">Confidentialité</a>
         <a href="support.html">Assistance</a>
       </nav>
+      <div class="nav-badge">
+        <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="Précommander Stops sur l’App Store">
+          <picture>
+            <source srcset="/assets/badges/pre-order-fr-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/badges/pre-order-fr-black.svg" alt="Précommander dans l’App Store" width="155" height="50">
+          </picture>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -415,45 +423,52 @@
         </figure>
 
       </div>
+    </section>
 
-      <div class="wrap">
-        <div class="grid">
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg></div>
-            <h3>Widgets</h3>
-            <p>Vos étapes les plus proches sur l’écran d’accueil et l’écran verrouillé, à un toucher de l’itinéraire, et un bouton pour enregistrer votre position.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
-            <h3>Siri et Raccourcis</h3>
-            <p>« Enregistrer ma position dans Stops » ou « Quelle est mon étape la plus proche dans Stops ? », en gardant les deux mains sur le volant.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
-            <h3>Spotlight et Intelligence visuelle</h3>
-            <p>Retrouvez une étape ou une liste depuis Spotlight, ou pointez l’appareil photo vers un lieu pour afficher son étape.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
-            <h3>Rappels d’arrivée</h3>
-            <p>Un petit signal quand vous approchez d’une étape enregistrée, avec la note que vous vous étiez laissée. Activé seulement si vous le souhaitez.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
-            <h3>Vos données, à votre façon</h3>
-            <p>Exportez tout ou n’importe quelle liste en GPX, KML ou CSV, quand vous voulez. Toujours gratuit.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
-            <h3>Dans votre langue</h3>
-            <p>Anglais, allemand, français, espagnol, italien, portugais, japonais, coréen et chinois.</p>
-          </div>
+    <!-- MARK: More ways -->
+    <section id="more">
+      <div class="card-scroller" tabindex="0" aria-label="D’autres façons d’utiliser Stops">
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg></div>
+          <h3>Widgets</h3>
+          <p>Vos étapes les plus proches sur l’écran d’accueil et l’écran verrouillé, à un toucher de l’itinéraire, et un bouton pour enregistrer votre position.</p>
+          <div class="card-art rising"><img src="../images/cards/widgets.png" alt="Un écran d’accueil avec le widget Stops qui propose d’enregistrer le Pont Neuf, là où vous êtes" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+          <h3>Siri et Raccourcis</h3>
+          <p>« Enregistrer ma position dans Stops » ou « Quelle est mon étape la plus proche dans Stops ? », en gardant les deux mains sur le volant.</p>
+          <div class="card-art rising"><img src="../images/cards/siri.png" alt="Siri propose d’activer les raccourcis de Stops : “Save a stop in Stops”, “Note a stop in Stops”, “Nearest stop in Stops”" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+          <h3>Rappels d’arrivée</h3>
+          <p>Un petit signal quand vous approchez d’une étape enregistrée, avec la note que vous vous étiez laissée. Activé seulement si vous le souhaitez.</p>
+          <div class="card-art rising"><img src="../images/cards/reminders.png" alt="Une notification sur la carte de Stops : Café Charlot est à proximité, avec la note laissée pour ce lieu" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+          <h3>Vos données, à votre façon</h3>
+          <p>Exportez tout ou n’importe quelle liste en GPX, KML ou CSV, quand vous voulez. Toujours gratuit.</p>
+          <div class="card-art files"><img src="../images/cards/export.png" alt="Fichiers GPX, KML et CSV" loading="lazy" width="720" height="440"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+          <h3>Spotlight et Intelligence visuelle</h3>
+          <p>Retrouvez une étape ou une liste depuis Spotlight, ou pointez l’appareil photo vers un lieu pour afficher son étape.</p>
+          <div class="card-art rising"><img src="../images/cards/spotlight.png" alt="Spotlight sur iPhone qui trouve le lieu Café Charlot en meilleur résultat" loading="lazy" width="720" height="661"></div>
+        </div>
+        <div class="card has-art">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+          <h3>Dans votre langue</h3>
+          <p>Anglais, allemand, français, espagnol, italien, portugais, japonais, coréen et chinois.</p>
+          <div class="card-art fan"><img src="../images/cards/languages.png" alt="Stops sur trois iPhone : l’import depuis Photos en japonais, Exporter en allemand et Stops Pro en français" loading="lazy" width="1000" height="641"></div>
         </div>
       </div>
     </section>
 
     <!-- MARK: iPhone Duo -->
-    <section id="duo">
+    <section id="duo" class="alt">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">iPhone Duo</span>
@@ -471,7 +486,7 @@
     </section>
 
     <!-- MARK: Apple Intelligence -->
-    <section id="intelligence" class="alt">
+    <section id="intelligence">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Apple Intelligence</span>
@@ -479,43 +494,54 @@
           <p>Sur les appareils compatibles avec Apple Intelligence, Stops rédige le récit de vos voyages, comprend ce que vous cherchez et met de l’ordre dans ce que vous importez. Tout se passe sur votre appareil, jamais sur un serveur, et sans Apple Intelligence, tout le reste fonctionne exactement pareil.</p>
         </div>
 
-        <div class="grid">
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-            <h3>Des voyages qui racontent leur propre histoire</h3>
-            <p>Une fois rentré, chaque voyage reçoit un titre et quelques lignes, écrits à partir de vos propres visites, villes et météo. Rien n’est inventé.</p>
+        <div class="ai-showcase">
+          <div class="ai-side left">
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+              <h3>Des voyages qui racontent leur propre histoire</h3>
+              <p>Une fois rentré, chaque voyage reçoit un titre et quelques lignes, écrits à partir de vos propres visites, villes et météo. Rien n’est inventé.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+              <h3>Demandez avec vos mots</h3>
+              <p>Cherchez « plages où je suis allé en Italie » ou « ce restaurant de ramen à Tokyo » et retrouvez les étapes et visites dont vous parlez.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h4"/></svg></div>
+              <h3>Enregistrez un article entier</h3>
+              <p>Partagez depuis Safari un article « meilleurs coins de baignade en Provence » et les lieux qu’il cite arrivent ensemble dans une nouvelle liste.</p>
+            </div>
           </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
-            <h3>Demandez avec vos mots</h3>
-            <p>Cherchez « plages où je suis allé en Italie » ou « ce restaurant de ramen à Tokyo » et retrouvez les étapes et visites dont vous parlez.</p>
+          <div class="ai-glow">
+            <div class="phone">
+              <div class="screen">
+                <img class="shot" src="../images/screens/trip-story.jpg" alt="La page d’un voyage de trois jours à Londres, avec un récit écrit par Apple Intelligence à partir des visites du voyage" loading="lazy" width="639" height="1391">
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h4"/></svg></div>
-            <h3>Enregistrez un article entier</h3>
-            <p>Partagez depuis Safari un article « meilleurs coins de baignade en Provence » et les lieux qu’il cite arrivent ensemble dans une nouvelle liste.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
-            <h3>Des imports plus soignés</h3>
-            <p>Les lieux importés depuis Google Takeout ou un fichier GPX reçoivent une catégorie d’après leur nom, et les nouvelles listes une icône et une couleur adaptées.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
-            <h3>Planifiez jour par jour</h3>
-            <p>Répartissez un itinéraire en journées d’étapes proches, chacune dans l’ordre qui lui convient : la rando le matin, le point de vue pour le coucher du soleil en dernier.</p>
-          </div>
-          <div class="card">
-            <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
-            <h3>Siri connaît vos voyages</h3>
-            <p>« Ouvrir mon voyage Lisbonne dans Stops », « Quand suis-je allé à Rome pour la dernière fois dans Stops ? » ou « Combien de pays ai-je visités dans Stops ? »</p>
+          <div class="ai-side right">
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
+              <h3>Des imports plus soignés</h3>
+              <p>Les lieux importés depuis Google Takeout ou un fichier GPX reçoivent une catégorie d’après leur nom, et les nouvelles listes une icône et une couleur adaptées.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+              <h3>Planifiez jour par jour</h3>
+              <p>Répartissez un itinéraire en journées d’étapes proches, chacune dans l’ordre qui lui convient : la rando le matin, le point de vue pour le coucher du soleil en dernier.</p>
+            </div>
+            <div class="ai-item">
+              <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+              <h3>Siri connaît vos voyages</h3>
+              <p>« Ouvrir mon voyage Lisbonne dans Stops », « Quand suis-je allé à Rome pour la dernière fois dans Stops ? » ou « Combien de pays ai-je visités dans Stops ? »</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- MARK: Stops Pro -->
-    <section id="pro">
+    <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Stops Pro</span>
@@ -523,8 +549,8 @@
           <p>L’enregistrement, les listes, votre carte et toute votre Chronologie sont gratuits, pour de bon. Stops Pro ajoute de quoi remonter plus loin dans le temps et préparer la suite.</p>
         </div>
 
-        <div class="plans">
-          <div class="plan">
+        <div class="compare">
+          <div class="compare-col">
             <h3>Gratuit</h3>
             <ul>
               <li>Enregistrez étapes, listes, épingles et catégories</li>
@@ -536,7 +562,7 @@
               <li>Widgets, Apple Watch, Siri et feuille de partage</li>
             </ul>
           </div>
-          <div class="plan pro">
+          <div class="compare-col pro">
             <h3>Stops Pro</h3>
             <ul>
               <li>Visites depuis Photos et depuis Google Timeline</li>
@@ -553,6 +579,15 @@
             </div>
             <p class="price-note">Prix en dollars US. Tarifs locaux sur l’App Store.</p>
           </div>
+        </div>
+
+        <div class="plan-cta">
+          <a class="appstore-badge" href="https://apps.apple.com/app/id6817774527" aria-label="Précommander Stops sur l’App Store">
+            <picture>
+              <source srcset="/assets/badges/pre-order-fr-white.svg" media="(prefers-color-scheme: dark)">
+              <img src="/assets/badges/pre-order-fr-black.svg" alt="Précommander dans l’App Store" width="155" height="50">
+            </picture>
+          </a>
         </div>
       </div>
     </section>
