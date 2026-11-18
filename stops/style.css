@@ -2215,3 +2215,123 @@ details p {
     color: var(--accent);
   }
 }
+
+/* MARK: - Press */
+
+.press .lede {
+  font-size: 22px;
+}
+
+.press h3 {
+  font-size: 20px;
+  margin: 28px 0 8px;
+}
+
+.press-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.press-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px 28px;
+  margin: 0;
+}
+
+.press-facts dt {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.press-facts dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 560px) {
+  .press-facts {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .press-facts dd {
+    margin-bottom: 12px;
+  }
+}
+
+.press-video {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.press-video video {
+  width: 260px;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid var(--hairline);
+  background: var(--bg-elevated);
+}
+
+.press-video div {
+  flex: 1 1 280px;
+}
+
+.press-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
+  margin: 14px 0 22px;
+}
+
+.press-gallery.wide {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* iPad, Mac, Watch and Duo shots differ in shape; the row shows them alike. */
+.press-gallery.wide img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.press-gallery a {
+  display: block;
+}
+
+.press-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--hairline);
+}
+
+.press-icons {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.press-icons img {
+  display: block;
+  border-radius: 22px;
+}
+
+.press-icons p {
+  grid-column: 1 / -1;
+}
+
+.press-store {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.press-store .platforms {
+  margin-top: 10px;
+  font-size: 15px;
+}

@@ -1,0 +1,43 @@
+Stops: press facts
+==================
+
+Name: Stops
+Tagline: Places you'll come back to.
+Developer: Edliss LLC. Designed and built by one developer, Ed Khamaiseh.
+Release: Tuesday 1 December 2026. Pre-order open on the App Store.
+Price: Free. Stops Pro inside the app: $49.99 once, $19.99 a year or $0.99 a week, with Family Sharing.
+Platforms: iPhone, iPad, Apple Watch and Apple silicon Macs. Requires iOS 26.2 or later.
+Languages: English, French, German, Italian, Spanish, Portuguese, Japanese, Korean and Chinese (Simplified and Traditional).
+Privacy: No account, no servers of ours, no analytics, no ads. App Store privacy label: Data Not Collected.
+Category: Travel
+App Store: https://apps.apple.com/app/apple-store/id6817774527?pt=2037783&ct=press&mt=8
+Website: https://edliss.com/stops
+Press page: https://edliss.com/stops/press.html
+TestFlight: https://testflight.apple.com/join/2h8BpNxS
+Stops Pro for reviewers: a code unlocking all of Pro, on request at ed@edliss.com with the outlet you write for
+Contact: Ed Khamaiseh, ed@edliss.com (Central European Time, replies within a day)
+
+In one paragraph
+----------------
+
+Stops is for people who explore by car: the quiet spot to camp, the view worth a cup of tea, the hike to do again. Maps apps get you there; Stops keeps the places. Switch it on once and it notes the places you spend time at, turns a few nights away into a trip with its map and a two-line story, and keeps a page for every country you set foot in. The years before Stops fill in from the photo library, read on the device and never copied. Every stop carries the weather you had there and the forecast for next time. Saving is one tap from the map, the share sheet, Siri, a widget or the watch. No account, no servers, no analytics: everything syncs through your own iCloud.
+
+Three ways into the story
+-------------------------
+
+For people who explore by car. Maps apps are built to get you somewhere. Stops is built for what you find along the way and want back: the campsite above the gorge, the beach under the bridge, the bakery in a village you would never find again. Pull over and tap once, or let Stops notice where you stopped and save it from the couch that evening. The next trip is planned from the places you already know you like, with the weekend's forecast on each of them.
+
+The years before Stops. Most people carry years of travel in their photo library and no way to see it as places. Stops reads where and when your photos were taken, on the device, and turns them into visits, trips, towns and countries. People who kept a Google Maps Timeline can bring that export in too. Nothing is copied or uploaded; the photos stay where they are and appear on the stops and days they belong to.
+
+Built for this year's Apple platforms. Stops is UIKit written in code by one developer, with no third-party code inside. It ships with Liquid Glass, App Intents and Siri, interactive widgets, Visual Intelligence, and Apple Intelligence running on device for trip stories, country introductions and plain-language search, with quiet fallbacks when the model is not there. The Apple Watch app saves a stop with Double Tap and points at your nearest one. The Mac app brings a menu bar, keyboard shortcuts and drag and drop. Twelve App Store localizations, complete down to the widgets and Siri phrases.
+
+Files
+-----
+
+icon/                 the icon at 1024 px, the dark variant at 512 px, the mark alone
+screenshots-framed/   App Store screenshots with captions: iPhone, iPad, Apple Watch
+screenshots/          plain screens from iPhone, iPad, Mac, Apple Watch and iPhone Duo
+video/                the App Store preview (886 x 1920, 28 s, no sound) and its poster frame
+social/               the link card, 1200 x 630
+
+All of it may be used in coverage of Stops.
