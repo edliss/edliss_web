@@ -29,7 +29,7 @@ For people who explore by car. Maps apps are built to get you somewhere. Stops i
 
 The years before Stops. Most people carry years of travel in their photo library and no way to see it as places. Stops reads where and when your photos were taken, on the device, and turns them into visits, trips, towns and countries. People who kept a Google Maps Timeline can bring that export in too. Nothing is copied or uploaded; the photos stay where they are and appear on the stops and days they belong to.
 
-Built for this year's Apple platforms. Stops is UIKit written in code by one developer, with no third-party code inside. It ships with Liquid Glass, App Intents and Siri, interactive widgets, Visual Intelligence, and Apple Intelligence running on device for trip stories, country introductions and plain-language search, with quiet fallbacks when the model is not there. The Apple Watch app saves a stop with Double Tap and points at your nearest one. The Mac app brings a menu bar, keyboard shortcuts and drag and drop. Twelve App Store localizations, complete down to the widgets and Siri phrases.
+Built for this year's Apple platforms. Stops is built by one developer with no third-party code inside. Saving works from the map, the share sheet, Siri, a widget and the Apple Watch. Apple Intelligence runs on the device to write a trip's two-line story and to answer plain-language searches. It runs on iPhone, iPad, Mac and Apple Watch, in twelve App Store languages.
 
 Files
 -----
