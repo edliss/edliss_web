@@ -2288,14 +2288,27 @@ details p {
   margin: 14px 0 22px;
 }
 
+/* iPad, Mac, Watch and Duo shots differ in shape: one row at one height, each at its own
+   proportions, never cropped. */
 .press-gallery.wide {
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
-/* iPad, Mac, Watch and Duo shots differ in shape; the row shows them alike. */
 .press-gallery.wide img {
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  width: auto;
+  height: 150px;
+}
+
+.press-gallery.wide img[src$="watch.jpg"] {
+  border-radius: 28px;
+}
+
+/* The closed Duo's outer screen: tight corners on the hinge side, round ones on the free
+   edge, the same cut as .device.duo-closed .screen on the home page. */
+.press-gallery.wide img[src$="duo-closed.jpg"] {
+  border-radius: 3% 12% 12% 3% / 2% 8% 8% 2%;
 }
 
 .press-gallery a {
